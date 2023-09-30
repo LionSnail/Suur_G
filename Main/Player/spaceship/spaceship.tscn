@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://clpgyc6slyw0j"]
+[gd_scene load_steps=8 format=3 uid="uid://clpgyc6slyw0j"]
 
 [ext_resource type="Script" path="res://Main/Player/spaceship/spaceship.gd" id="1_5cwwt"]
 [ext_resource type="PackedScene" uid="uid://dqj2xbfspjk3a" path="res://Main/Player/spaceship/machines/engine.tscn" id="3_q03dr"]
 [ext_resource type="PackedScene" uid="uid://c5eymjwuxf6nj" path="res://Main/Player/spaceship/machines/oxygen.tscn" id="4_ar1wm"]
 [ext_resource type="PackedScene" uid="uid://chneqyyjnlx3b" path="res://Main/Player/spaceship/machines/repair.tscn" id="5_8unqj"]
 [ext_resource type="PackedScene" uid="uid://d1cu6bpedbs5g" path="res://Main/Player/baseart.tscn" id="5_olv3l"]
+[ext_resource type="Texture2D" uid="uid://d1f4y3i5tu4fn" path="res://Artwork/enviroment/light.png" id="6_e5rgy"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_s02re"]
+polygon = PackedVector2Array(-197, -291, -100, -349, 30, -355, 139, -316, 226, -161, 244, 1, 224, 185, 153, 315, 82, 385, -139, 382, -255, 248, -286, 93, -271, -78, -197, -300, -278, -356, -394, -102, -364, 200, -258, 473, -16, 480, 267, 401, 358, 95, 410, -199, 264, -367, 94, -432, -139, -406, -281, -347)
 
 [node name="Spaceship" type="Node2D"]
 script = ExtResource("1_5cwwt")
@@ -26,6 +30,7 @@ position = Vector2(-123, -17)
 [node name="shiphull" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="shiphull"]
+visible = false
 z_index = 3
 polygon = PackedVector2Array(-208, -392, -280, -256, -328, -80, -336, 64, -320, 192, -280, 304, -216, 384, 168, 384, 264, 256, 288, 104, 280, -56, 232, -272, 152, -400, -208, -392, -184, -344, 88, -336, 192, -232, 256, -48, 248, 128, 192, 288, 96, 352, -192, 360, -272, 248, -296, 64, -272, -184, -184, -344)
 
@@ -33,5 +38,16 @@ polygon = PackedVector2Array(-208, -392, -280, -256, -328, -80, -336, 64, -320, 
 
 [node name="PointLight2D" type="PointLight2D" parent="lights"]
 position = Vector2(-16, -320)
+color = Color(0.917647, 0.862745, 0.713726, 1)
+energy = 0.1
+shadow_enabled = true
+texture = ExtResource("6_e5rgy")
+texture_scale = 3.25
+height = 2.0
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="lights"]
+occluder = SubResource("OccluderPolygon2D_s02re")
+
+[node name="Node" type="Node" parent="lights"]
 
 [connection signal="area_entered" from="shiphull" to="." method="_on_shiphull_area_entered"]

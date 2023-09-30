@@ -22,7 +22,7 @@ FMODRuntime="*res://addons/FMOD/runtime/fmod_runtime_manager.gd"
 
 [display]
 
-window/size/viewport_width=1280
+window/size/viewport_width=1536
 window/size/viewport_height=768
 window/stretch/mode="canvas_items"
 
@@ -39,6 +39,7 @@ import/blender/enabled=false
 settings/fmod_output_type=0
 settings/fmod_debug_flags=0
 settings/fmod_debug_mode=1
+settings/banks_to_load_at_startup=Array[String](["res://Sound/FMOD-Banks/Music.bank"])
 settings/banks_preload_samples=false
 settings/banks_flags=0
 settings/sample_rate=48000
@@ -54,7 +55,6 @@ settings/encryption_key=""
 settings/distance_scale_2d=1.0
 settings/init_with_3d_righthanded=true
 settings/banks_path="res://Sound/FMOD-Banks"
-settings/banks_to_load_at_startup=Array[String](["res://Sound/FMOD-Banks/Music.bank"])
 
 [input]
 
