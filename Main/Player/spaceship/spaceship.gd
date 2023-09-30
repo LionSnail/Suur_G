@@ -21,12 +21,8 @@ func click(current):
 			
 		"Engine":
 			engine_amount = clamp(engine_amount + 1, 0, 100)
-			
-		"Repair":
-			repair_amount = clamp(repair_amount + 1, 0, 100)
-			
-		"Guns":
-			pass
+		
+		
 	
 
 

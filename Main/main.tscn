@@ -31,28 +31,28 @@ texture = ExtResource("3_k8ve2")
 
 [node name="darkness_1" type="PointLight2D" parent="env"]
 position = Vector2(896, -384)
-energy = 0.5
+energy = 0.7
 blend_mode = 1
 texture = ExtResource("4_vdlev")
-texture_scale = 4.0
+texture_scale = 5.0
 
 [node name="darkness_2" type="PointLight2D" parent="env"]
 position = Vector2(896, 384)
-energy = 0.5
+energy = 0.7
 blend_mode = 1
 texture = ExtResource("4_vdlev")
-texture_scale = 4.0
+texture_scale = 5.0
 
 [node name="darkness_3" type="PointLight2D" parent="env"]
 position = Vector2(-896, -384)
-energy = 0.5
+energy = 0.7
 blend_mode = 1
 texture = ExtResource("4_vdlev")
-texture_scale = 4.0
+texture_scale = 5.0
 
 [node name="darkness_4" type="PointLight2D" parent="env"]
 position = Vector2(-896, 384)
-energy = 0.5
+energy = 0.7
 blend_mode = 1
 texture = ExtResource("4_vdlev")
-texture_scale = 4.0
+texture_scale = 5.0

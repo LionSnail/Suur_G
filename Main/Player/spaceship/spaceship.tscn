@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://clpgyc6slyw0j"]
+[gd_scene load_steps=7 format=3 uid="uid://clpgyc6slyw0j"]
 
 [ext_resource type="Script" path="res://Main/Player/spaceship/spaceship.gd" id="1_5cwwt"]
 [ext_resource type="PackedScene" uid="uid://dqj2xbfspjk3a" path="res://Main/Player/spaceship/machines/engine.tscn" id="3_q03dr"]
 [ext_resource type="PackedScene" uid="uid://c5eymjwuxf6nj" path="res://Main/Player/spaceship/machines/oxygen.tscn" id="4_ar1wm"]
-[ext_resource type="PackedScene" uid="uid://chneqyyjnlx3b" path="res://Main/Player/spaceship/machines/repair.tscn" id="5_8unqj"]
 [ext_resource type="PackedScene" uid="uid://d1cu6bpedbs5g" path="res://Main/Player/baseart.tscn" id="5_olv3l"]
 [ext_resource type="Texture2D" uid="uid://d1f4y3i5tu4fn" path="res://Artwork/enviroment/light.png" id="6_e5rgy"]
 
@@ -24,15 +23,11 @@ position = Vector2(176, 137)
 [node name="Oxygen" parent="modules" instance=ExtResource("4_ar1wm")]
 position = Vector2(-200, 201)
 
-[node name="Repair" parent="modules" instance=ExtResource("5_8unqj")]
-position = Vector2(-123, -17)
-
 [node name="shiphull" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="shiphull"]
-visible = false
 z_index = 3
-polygon = PackedVector2Array(-208, -392, -280, -256, -328, -80, -336, 64, -320, 192, -280, 304, -216, 384, 168, 384, 264, 256, 288, 104, 280, -56, 232, -272, 152, -400, -208, -392, -184, -344, 88, -336, 192, -232, 256, -48, 248, 128, 192, 288, 96, 352, -192, 360, -272, 248, -296, 64, -272, -184, -184, -344)
+polygon = PackedVector2Array(-208, -392, -280, -256, -328, -80, -336, 64, -320, 192, -280, 304, -216, 384, 168, 384, 270, 270, 315, 114, 301, -61, 251, -270, 166, -390, -208, -392, -184, -344, 88, -336, 192, -232, 256, -48, 248, 128, 192, 288, 96, 352, -192, 360, -272, 248, -296, 64, -272, -184, -184, -344)
 
 [node name="lights" parent="." instance=ExtResource("5_olv3l")]
 
@@ -46,6 +41,7 @@ texture_scale = 3.25
 height = 2.0
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="lights"]
+visible = false
 occluder = SubResource("OccluderPolygon2D_s02re")
 
 [node name="Node" type="Node" parent="lights"]
