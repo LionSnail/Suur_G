@@ -26,6 +26,10 @@ window/size/viewport_width=1280
 window/size/viewport_height=768
 window/stretch/mode="canvas_items"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/FMOD/plugin.cfg")
+
 [filesystem]
 
 import/blender/enabled=false
@@ -50,6 +54,7 @@ settings/enable_memory_tracking=false
 settings/encryption_key=""
 settings/distance_scale_2d=1.0
 settings/init_with_3d_righthanded=true
+settings/banks_path="res://Sound/FMOD-Banks"
 
 [input]
 
