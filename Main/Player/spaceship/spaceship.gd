@@ -15,9 +15,11 @@ func _ready():
 func _physics_process(delta):
 	update_ui()
 	
+	
 	difficulty += 0.0005
 
-
+func flickering():
+	$lights/PointLight2D.energy = randf_range(0.00, 0.2)
 
 func click(current):
 	match current:
@@ -56,3 +58,7 @@ func _on_shiphull_area_entered(area):
 	if area.is_in_group("Enemy"):
 		area.latch()
 		print(area)
+
+
+func _on_flicker_1_timeout():
+	flickering()

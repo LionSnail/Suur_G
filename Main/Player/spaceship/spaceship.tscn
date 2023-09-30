@@ -24,6 +24,7 @@ position = Vector2(176, 137)
 position = Vector2(-200, 201)
 
 [node name="shiphull" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="shiphull"]
 z_index = 3
@@ -40,10 +41,39 @@ texture = ExtResource("6_e5rgy")
 texture_scale = 3.25
 height = 2.0
 
+[node name="PointLight2D" type="PointLight2D" parent="lights/PointLight2D"]
+energy = 1.75
+texture = ExtResource("6_e5rgy")
+
 [node name="LightOccluder2D" type="LightOccluder2D" parent="lights"]
 visible = false
 occluder = SubResource("OccluderPolygon2D_s02re")
 
-[node name="Node" type="Node" parent="lights"]
+[node name="smalllights" type="Node" parent="lights"]
+
+[node name="bluelight" type="PointLight2D" parent="lights/smalllights"]
+position = Vector2(-161, 119)
+color = Color(0, 1, 1, 1)
+texture = ExtResource("6_e5rgy")
+texture_scale = 2.0
+
+[node name="redlight" type="PointLight2D" parent="lights/smalllights"]
+position = Vector2(185, 128)
+color = Color(1, 0.941176, 0.141176, 1)
+texture = ExtResource("6_e5rgy")
+
+[node name="flicker1" type="Timer" parent="lights"]
+wait_time = 0.05
+autostart = true
+
+[node name="darkness" type="Node" parent="lights"]
+
+[node name="PointLight2D" type="PointLight2D" parent="lights/darkness"]
+position = Vector2(0, 352)
+scale = Vector2(5, 5)
+blend_mode = 1
+texture = ExtResource("6_e5rgy")
+metadata/_edit_lock_ = true
 
 [connection signal="area_entered" from="shiphull" to="." method="_on_shiphull_area_entered"]
+[connection signal="timeout" from="lights/flicker1" to="." method="_on_flicker_1_timeout"]
