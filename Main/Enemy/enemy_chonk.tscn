@@ -26,7 +26,7 @@ speed = 0.5
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.299306, 0.3)
 sprite_frames = SubResource("SpriteFrames_ierr5")
-frame_progress = 0.696808
+frame_progress = 0.809441
 flip_h = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]

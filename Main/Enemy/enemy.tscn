@@ -20,7 +20,7 @@ animations = [{
 
 [node name="enemy_basic" type="Area2D" groups=["Enemy"]]
 script = ExtResource("1_uh8ad")
-hp = 1
+hp = 2
 speed = 1.0
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]

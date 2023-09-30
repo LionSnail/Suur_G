@@ -4,6 +4,7 @@ extends Node2D
 
 @onready var enemy_basic = load("res://Main/Enemy/enemy.tscn")
 @onready var enemy_speedy = load("res://Main/Enemy/enemy_speedy.tscn")
+@onready var enemy_chonk = load("res://Main/Enemy/enemy_chonk.tscn")
 
 var is_emitting = false
 
@@ -13,6 +14,9 @@ func create_enemy(type):
 		enemy_i = enemy_basic.instantiate()
 	elif type == 2:
 		enemy_i = enemy_speedy.instantiate()
+	
+	elif type == 3:
+		enemy_i = enemy_chonk.instantiate()
 		
 	enemy_i.position.y = randi_range(-250, 250)
 	enemy_i.position.x = self.position.x
@@ -21,6 +25,6 @@ func create_enemy(type):
 
 func _on_timer_timeout():
 	randomize()
-	var randnum = randi_range(1, 2)
+	var randnum = randi_range(1, 3)
 	create_enemy(randnum)
 
