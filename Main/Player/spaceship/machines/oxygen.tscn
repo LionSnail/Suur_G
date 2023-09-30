@@ -9,7 +9,7 @@ script = ExtResource("1_vrb8q")
 icon = ExtResource("2_fg3f7")
 
 [node name="icon" parent="." instance=ExtResource("2_bawbi")]
-z_index = 2
+z_index = 4
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true

@@ -18,7 +18,8 @@ func _ready():
 	latch_sprite = stats.sprite_latch
 	
 	if dir_x == -1:
-		$Sprite2D.flip_h = true
+		$Sprite2D.flip_h = false
+		$CollisionPolygon2D.scale.x = -1
 	
 
 

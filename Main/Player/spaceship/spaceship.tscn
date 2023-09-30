@@ -27,8 +27,11 @@ position = Vector2(-123, -17)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="shiphull"]
 z_index = 3
-polygon = PackedVector2Array(-208, -392, -280, -256, -328, -80, -336, 64, -320, 192, -280, 304, -216, 384, 168, 384, 264, 256, 288, 104, 280, -56, 232, -272, 152, -400, -208, -400, -184, -352, 88, -336, 192, -232, 256, -48, 248, 128, 192, 288, 96, 352, -192, 360, -272, 248, -296, 64, -272, -184, -184, -344)
+polygon = PackedVector2Array(-208, -392, -280, -256, -328, -80, -336, 64, -320, 192, -280, 304, -216, 384, 168, 384, 264, 256, 288, 104, 280, -56, 232, -272, 152, -400, -208, -392, -184, -344, 88, -336, 192, -232, 256, -48, 248, 128, 192, 288, 96, 352, -192, 360, -272, 248, -296, 64, -272, -184, -184, -344)
 
-[node name="Node" parent="." instance=ExtResource("5_olv3l")]
+[node name="lights" parent="." instance=ExtResource("5_olv3l")]
+
+[node name="PointLight2D" type="PointLight2D" parent="lights"]
+position = Vector2(-16, -320)
 
 [connection signal="area_entered" from="shiphull" to="." method="_on_shiphull_area_entered"]

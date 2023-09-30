@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bfoc7jybdd38h"]
+[gd_scene load_steps=4 format=3 uid="uid://bfoc7jybdd38h"]
 
 [ext_resource type="PackedScene" uid="uid://clpgyc6slyw0j" path="res://Main/Player/spaceship/spaceship.tscn" id="1_er61o"]
 [ext_resource type="PackedScene" uid="uid://cepqr3bqc26h7" path="res://Main/Enemy/enemy_spawner.tscn" id="3_f8fsi"]
+[ext_resource type="Texture2D" uid="uid://d3k3qcrpieefy" path="res://Artwork/enviroment/spacebg.png" id="3_k8ve2"]
 
 [node name="Main" type="Node2D"]
 
@@ -18,3 +19,9 @@ dir_x = -1
 [node name="Enemy_spawner2" parent="spawners" instance=ExtResource("3_f8fsi")]
 position = Vector2(-896, 0)
 dir_x = 1
+
+[node name="bg" type="Node" parent="."]
+
+[node name="Spacebg" type="Sprite2D" parent="bg"]
+z_index = -3
+texture = ExtResource("3_k8ve2")
