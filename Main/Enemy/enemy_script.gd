@@ -1,6 +1,7 @@
 extends Area2D
 
 var is_mouse = false
+var on_guns = false
 @export var stats : Resource
 
 var hp

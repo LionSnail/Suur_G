@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://clpgyc6slyw0j"]
+[gd_scene load_steps=6 format=3 uid="uid://clpgyc6slyw0j"]
 
 [ext_resource type="Script" path="res://Main/Player/spaceship/spaceship.gd" id="1_5cwwt"]
-[ext_resource type="Texture2D" path="res://Artwork/concept.png" id="1_cwa5u"]
-[ext_resource type="PackedScene" uid="uid://dqj2xbfspjk3a" path="res://Main/Player/spaceship/engine.tscn" id="3_q03dr"]
+[ext_resource type="Texture2D" uid="uid://cl240otcdff4x" path="res://Artwork/concept.png" id="1_cwa5u"]
+[ext_resource type="PackedScene" uid="uid://dqj2xbfspjk3a" path="res://Main/Player/spaceship/machines/engine.tscn" id="3_q03dr"]
+[ext_resource type="PackedScene" uid="uid://c5eymjwuxf6nj" path="res://Main/Player/spaceship/machines/oxygen.tscn" id="4_ar1wm"]
+[ext_resource type="PackedScene" uid="uid://chneqyyjnlx3b" path="res://Main/Player/spaceship/machines/repair.tscn" id="5_8unqj"]
 
 [node name="Spaceship" type="Node2D"]
 script = ExtResource("1_5cwwt")
@@ -12,9 +14,14 @@ scale = Vector2(0.18, 0.18)
 texture = ExtResource("1_cwa5u")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.5, 0.5)
 
 [node name="modules" type="Node2D" parent="."]
 
 [node name="Engine" parent="modules" instance=ExtResource("3_q03dr")]
 position = Vector2(72, 224)
+
+[node name="Oxygen" parent="modules" instance=ExtResource("4_ar1wm")]
+position = Vector2(-176, 184)
+
+[node name="Repair" parent="modules" instance=ExtResource("5_8unqj")]
+position = Vector2(168, -24)

@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://cobx61dy5kopi"]
+
+[node name="base" type="Sprite2D"]
+
+[node name="top" type="Sprite2D" parent="."]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqj2xbfspjk3a"]
+
+[ext_resource type="Script" path="res://Main/Player/spaceship/machines/machines.gd" id="1_qbidj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nphoq"]
+radius = 24.0
+
+[node name="Engine" type="Area2D"]
+script = ExtResource("1_qbidj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_nphoq")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

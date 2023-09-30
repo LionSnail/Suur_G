@@ -26,8 +26,11 @@ func _physics_process(delta):
 			
 		"Guns":
 			pass
-	print(current, oxy_amount)
+	print(current)
 
-func get_current(type):
+func set_current(type):
 	current = type
+	for child in get_node("modules").get_children():
+		if child.name != current:
+			child.active = false
 
