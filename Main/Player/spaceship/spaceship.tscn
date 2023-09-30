@@ -53,7 +53,7 @@ occluder = SubResource("OccluderPolygon2D_s02re")
 
 [node name="bluelight" type="PointLight2D" parent="lights/smalllights"]
 position = Vector2(-161, 119)
-color = Color(0, 1, 1, 1)
+color = Color(0.54902, 1, 0.545098, 1)
 texture = ExtResource("6_e5rgy")
 texture_scale = 2.0
 

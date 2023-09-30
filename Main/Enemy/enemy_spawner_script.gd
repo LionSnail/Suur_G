@@ -14,10 +14,10 @@ func create_enemy(type):
 		enemy_i = enemy_basic.instantiate()
 	elif type == 2:
 		enemy_i = enemy_speedy.instantiate()
-	
 	elif type == 3:
 		enemy_i = enemy_chonk.instantiate()
-		
+	
+	
 	enemy_i.position.y = randi_range(-250, 250)
 	enemy_i.position.x = self.position.x
 	enemy_i.dir_x = dir_x

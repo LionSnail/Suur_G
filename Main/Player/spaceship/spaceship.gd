@@ -4,7 +4,7 @@ extends Node2D
 
 var oxy_amount = 100
 var engine_amount = 100
-var repair_amount = 100
+var hp = 10
 var current = ""
 
 var difficulty = 0.1
@@ -40,6 +40,17 @@ func set_current(type):
 		if child.name != current:
 			child.active = false
 
+func screen_shake(force):
+	force = 4 * pow(force, -1)
+	$Camera2D.offset = Vector2(randi_range(-force, force), randi_range(-force, force))
+	await  get_tree().create_timer(0.1).timeout
+	$Camera2D.offset = Vector2(randi_range(-force, force), randi_range(-force, force))
+	await  get_tree().create_timer(0.1).timeout
+	$Camera2D.offset = Vector2(randi_range(-force, force), randi_range(-force, force))
+	await  get_tree().create_timer(0.1).timeout
+	$Camera2D.offset = Vector2.ZERO
+
+
 
 func remove_engine(amount):
 	engine_amount -= amount * difficulty
@@ -54,10 +65,17 @@ func update_ui():
 	$modules/Engine/icon/bar/ProgressBar.value = engine_amount
 	
 
+
+
+
 func _on_shiphull_area_entered(area):
 	if area.is_in_group("Enemy"):
 		area.latch()
-		print(area)
+		screen_shake(area.speed)
+		hp -= area.hp
+		if hp <= 0:
+			get_parent().end_game(1)
+
 
 
 func _on_flicker_1_timeout():
