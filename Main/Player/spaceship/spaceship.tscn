@@ -1,34 +1,34 @@
 [gd_scene load_steps=6 format=3 uid="uid://clpgyc6slyw0j"]
 
 [ext_resource type="Script" path="res://Main/Player/spaceship/spaceship.gd" id="1_5cwwt"]
-[ext_resource type="Texture2D" uid="uid://cl240otcdff4x" path="res://Artwork/placeholders/concept.png" id="2_ujddp"]
 [ext_resource type="PackedScene" uid="uid://dqj2xbfspjk3a" path="res://Main/Player/spaceship/machines/engine.tscn" id="3_q03dr"]
 [ext_resource type="PackedScene" uid="uid://c5eymjwuxf6nj" path="res://Main/Player/spaceship/machines/oxygen.tscn" id="4_ar1wm"]
 [ext_resource type="PackedScene" uid="uid://chneqyyjnlx3b" path="res://Main/Player/spaceship/machines/repair.tscn" id="5_8unqj"]
+[ext_resource type="PackedScene" uid="uid://d1cu6bpedbs5g" path="res://Main/Player/baseart.tscn" id="5_olv3l"]
 
 [node name="Spaceship" type="Node2D"]
 script = ExtResource("1_5cwwt")
 
-[node name="Concept" type="Sprite2D" parent="."]
-scale = Vector2(0.18, 0.18)
-texture = ExtResource("2_ujddp")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="modules" type="Node2D" parent="."]
+z_index = 2
 
 [node name="Engine" parent="modules" instance=ExtResource("3_q03dr")]
-position = Vector2(72, 224)
+position = Vector2(176, 137)
 
 [node name="Oxygen" parent="modules" instance=ExtResource("4_ar1wm")]
-position = Vector2(-176, 184)
+position = Vector2(-200, 201)
 
 [node name="Repair" parent="modules" instance=ExtResource("5_8unqj")]
-position = Vector2(168, -24)
+position = Vector2(-123, -17)
 
 [node name="shiphull" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="shiphull"]
-polygon = PackedVector2Array(-208, -328, -272, -184, -312, 0, -288, 200, -240, 320, -208, 360, 240, 360, 256, 312, 280, 168, 296, 0, 272, -200, 200, -320, 184, -336, -208, -328, -160, -280, 160, -280, 264, -8, 208, 312, -200, 312, -240, 96, -232, -136, -160, -280)
+z_index = 3
+polygon = PackedVector2Array(-208, -392, -280, -256, -328, -80, -336, 64, -320, 192, -280, 304, -216, 384, 168, 384, 264, 256, 288, 104, 280, -56, 232, -272, 152, -400, -208, -400, -184, -352, 88, -336, 192, -232, 256, -48, 248, 128, 192, 288, 96, 352, -192, 360, -272, 248, -296, 64, -272, -184, -184, -344)
+
+[node name="Node" parent="." instance=ExtResource("5_olv3l")]
 
 [connection signal="area_entered" from="shiphull" to="." method="_on_shiphull_area_entered"]

@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0kie7e7shgcq"]
+[gd_scene load_steps=2 format=3 uid="uid://c0kie7e7shgcq"]
 
 [ext_resource type="Script" path="res://Main/Player/spaceship/machines/highlight.gd" id="1_fvvhg"]
-[ext_resource type="Texture2D" uid="uid://d71wjkqvdlsh" path="res://icon.svg" id="1_hfd2t"]
 
 [node name="icon" type="Node2D"]
 script = ExtResource("1_fvvhg")
@@ -9,8 +8,7 @@ script = ExtResource("1_fvvhg")
 [node name="highlight" type="Sprite2D" parent="."]
 visible = false
 modulate = Color(100, 100, 100, 1)
+z_index = -1
 scale = Vector2(1.1, 1.1)
-texture = ExtResource("1_hfd2t")
 
 [node name="top" type="Sprite2D" parent="."]
-texture = ExtResource("1_hfd2t")
