@@ -21,9 +21,9 @@ func highlight(enabled):
 
 func _on_mouse_entered():
 	is_mouse = true
-	highlight(true)
+	get_node("icon").highlight(true)
 
 
 func _on_mouse_exited():
 	is_mouse = false
-	highlight(false)
+	get_node("icon").highlight(false)

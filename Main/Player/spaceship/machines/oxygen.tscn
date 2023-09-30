@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c5eymjwuxf6nj"]
+[gd_scene load_steps=4 format=3 uid="uid://c5eymjwuxf6nj"]
 
 [ext_resource type="Script" path="res://Main/Player/spaceship/machines/machines.gd" id="1_vrb8q"]
+[ext_resource type="PackedScene" uid="uid://c0kie7e7shgcq" path="res://Main/Player/spaceship/machines/machinesprite.tscn" id="2_bawbi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7tfec"]
 radius = 32.0
@@ -10,6 +11,8 @@ script = ExtResource("1_vrb8q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_7tfec")
+
+[node name="icon" parent="." instance=ExtResource("2_bawbi")]
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
