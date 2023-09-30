@@ -25,3 +25,10 @@ position = Vector2(-176, 184)
 
 [node name="Repair" parent="modules" instance=ExtResource("5_8unqj")]
 position = Vector2(168, -24)
+
+[node name="shiphull" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="shiphull"]
+polygon = PackedVector2Array(-208, -328, -272, -184, -312, 0, -288, 200, -240, 320, -208, 360, 240, 360, 256, 312, 280, 168, 296, 0, 272, -200, 200, -320, 184, -336, -208, -328, -160, -280, 160, -280, 264, -8, 208, 312, -200, 312, -240, 96, -232, -136, -160, -280)
+
+[connection signal="area_entered" from="shiphull" to="." method="_on_shiphull_area_entered"]

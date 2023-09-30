@@ -45,3 +45,9 @@ func remove_oxygen(amount):
 	oxy_amount -= amount
 	pass
 
+
+
+func _on_shiphull_area_entered(area):
+	if area.is_in_group("Enemy"):
+		area.latch()
+		print(area)
