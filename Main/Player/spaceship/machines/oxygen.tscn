@@ -2,20 +2,20 @@
 
 [ext_resource type="Script" path="res://Main/Player/spaceship/machines/machines.gd" id="1_vrb8q"]
 [ext_resource type="PackedScene" uid="uid://c0kie7e7shgcq" path="res://Main/Player/spaceship/machines/machinesprite.tscn" id="2_bawbi"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_7tfec"]
-radius = 32.0
+[ext_resource type="Texture2D" uid="uid://b14nhry3j51d2" path="res://Artwork/Ship/shipoxygen.png" id="2_fg3f7"]
 
 [node name="Oxygen" type="Area2D"]
 script = ExtResource("1_vrb8q")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_7tfec")
+icon = ExtResource("2_fg3f7")
 
 [node name="icon" parent="." instance=ExtResource("2_bawbi")]
+z_index = 2
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-66, -105, -32, -129, 23, -135, 53, -108, 59, -17, 69, 100, 69, 137, 62, 144, 33, 114, -19, 51, -53, -32)
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

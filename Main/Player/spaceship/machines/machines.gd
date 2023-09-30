@@ -4,6 +4,11 @@ var is_mouse = false
 var active = false
 var type = name
 
+@export var icon : CompressedTexture2D 
+
+func _ready():
+	$icon.add_icon(icon)
+
 func _physics_process(delta):
 	if Input.is_action_just_pressed("click") and is_mouse:
 		active = true
