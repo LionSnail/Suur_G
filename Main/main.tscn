@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://bfoc7jybdd38h"]
+[gd_scene load_steps=8 format=3 uid="uid://bfoc7jybdd38h"]
 
 [ext_resource type="Script" path="res://Main/main_script.gd" id="1_eeh8b"]
 [ext_resource type="PackedScene" uid="uid://clpgyc6slyw0j" path="res://Main/Player/spaceship/spaceship.tscn" id="1_er61o"]
 [ext_resource type="PackedScene" uid="uid://cepqr3bqc26h7" path="res://Main/Enemy/enemy_spawner.tscn" id="3_f8fsi"]
 [ext_resource type="Texture2D" uid="uid://d3k3qcrpieefy" path="res://Artwork/enviroment/spacebg.png" id="3_k8ve2"]
 [ext_resource type="Texture2D" uid="uid://d1f4y3i5tu4fn" path="res://Artwork/enviroment/light.png" id="4_vdlev"]
+[ext_resource type="PackedScene" uid="uid://6rh888bwbkee" path="res://Main/UI/main_menu/fade_manager.tscn" id="6_efwlp"]
 
 [sub_resource type="Gradient" id="Gradient_ij3qf"]
 offsets = PackedFloat32Array(0, 0.503311, 1)
@@ -82,5 +83,8 @@ angle_max = 720.0
 scale_amount_min = 5.0
 scale_amount_max = 10.0
 color_ramp = SubResource("Gradient_ij3qf")
+
+[node name="Fade_manager" parent="." instance=ExtResource("6_efwlp")]
+z_index = 10
 
 [editable path="Spaceship"]

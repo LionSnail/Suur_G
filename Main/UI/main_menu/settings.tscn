@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://bvrns7nrll4uu"]
+[gd_scene load_steps=2 format=3 uid="uid://bvrns7nrll4uu"]
+
+[ext_resource type="Texture2D" uid="uid://cpb10coi021hb" path="res://Artwork/UI/button.png" id="1_4ryl4"]
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -8,6 +10,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Button" type="Sprite2D" parent="."]
+position = Vector2(768, 369)
+texture = ExtResource("1_4ryl4")
+
 [node name="VBoxContainer" type="CenterContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -16,28 +22,20 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="VBoxContainer"]
-custom_minimum_size = Vector2(500, 400)
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer/Panel/VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Volume"
 horizontal_alignment = 1
 
-[node name="HSlider" type="HSlider" parent="VBoxContainer/Panel/VBoxContainer"]
+[node name="HSlider" type="HSlider" parent="VBoxContainer/VBoxContainer"]
 layout_mode = 2
 value = 90.0
 
-[node name="done" type="Button" parent="VBoxContainer/Panel/VBoxContainer"]
+[node name="done" type="Button" parent="VBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Done"
