@@ -8,8 +8,18 @@ func _on_start_pressed():
 
 
 func _on_settings_pressed():
-	pass # Replace with function body.
+	$HBoxContainer.visible = false
+	$Settings.visible = true
 
 
 func _on_quit_pressed():
 	get_tree().quit()
+
+
+func _on_h_slider_value_changed(value):
+	pass # Replace with function body.
+
+
+func _on_done_pressed():
+	$HBoxContainer.visible = true
+	$Settings.visible = false

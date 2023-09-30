@@ -37,3 +37,7 @@ horizontal_alignment = 1
 [node name="HSlider" type="HSlider" parent="VBoxContainer/Panel/VBoxContainer"]
 layout_mode = 2
 value = 90.0
+
+[node name="done" type="Button" parent="VBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+text = "Done"
