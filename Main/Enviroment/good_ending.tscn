@@ -1,3 +1,13 @@
-[gd_scene format=3 uid="uid://b76nidx4fe5uc"]
+[gd_scene load_steps=2 format=3 uid="uid://b76nidx4fe5uc"]
+
+[ext_resource type="PackedScene" uid="uid://6rh888bwbkee" path="res://Main/UI/main_menu/fade_manager.tscn" id="1_pvr61"]
 
 [node name="Good_ending" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Here is the good ending...
+"
+
+[node name="Fade_manager" parent="." instance=ExtResource("1_pvr61")]
