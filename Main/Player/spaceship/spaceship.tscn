@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://clpgyc6slyw0j"]
+[gd_scene load_steps=8 format=3 uid="uid://clpgyc6slyw0j"]
 
 [ext_resource type="Script" path="res://Main/Player/spaceship/spaceship.gd" id="1_5cwwt"]
+[ext_resource type="PackedScene" uid="uid://bhkwwjwq1tq6q" path="res://Main/UI/textbox.tscn" id="2_xvprj"]
 [ext_resource type="PackedScene" uid="uid://dqj2xbfspjk3a" path="res://Main/Player/spaceship/machines/engine.tscn" id="3_q03dr"]
 [ext_resource type="PackedScene" uid="uid://c5eymjwuxf6nj" path="res://Main/Player/spaceship/machines/oxygen.tscn" id="4_ar1wm"]
-[ext_resource type="PackedScene" uid="uid://d1cu6bpedbs5g" path="res://Main/Player/baseart.tscn" id="5_olv3l"]
+[ext_resource type="PackedScene" uid="uid://bxcqgdqnhcqho" path="res://Main/Player/baseart.tscn" id="5_olv3l"]
 [ext_resource type="Texture2D" uid="uid://d1f4y3i5tu4fn" path="res://Artwork/enviroment/light.png" id="6_e5rgy"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_s02re"]
@@ -14,8 +15,13 @@ script = ExtResource("1_5cwwt")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
+[node name="Textbox" parent="Camera2D" instance=ExtResource("2_xvprj")]
+offset_top = -336.0
+offset_bottom = -336.0
+
 [node name="modules" type="Node2D" parent="."]
 z_index = 2
+position = Vector2(0, -8)
 
 [node name="Engine" parent="modules" instance=ExtResource("3_q03dr")]
 position = Vector2(176, 137)
@@ -30,7 +36,7 @@ visible = false
 z_index = 3
 polygon = PackedVector2Array(-208, -392, -280, -256, -328, -80, -336, 64, -320, 192, -280, 304, -216, 384, 168, 384, 270, 270, 315, 114, 301, -61, 251, -270, 166, -390, -208, -392, -184, -344, 88, -336, 192, -232, 256, -48, 248, 128, 192, 288, 96, 352, -192, 360, -272, 248, -296, 64, -272, -184, -184, -344)
 
-[node name="lights" parent="." instance=ExtResource("5_olv3l")]
+[node name="lights" type="Node2D" parent="."]
 
 [node name="PointLight2D" type="PointLight2D" parent="lights"]
 position = Vector2(-16, -320)
@@ -74,6 +80,8 @@ scale = Vector2(5, 5)
 blend_mode = 1
 texture = ExtResource("6_e5rgy")
 metadata/_edit_lock_ = true
+
+[node name="baseart" parent="." instance=ExtResource("5_olv3l")]
 
 [connection signal="area_entered" from="shiphull" to="." method="_on_shiphull_area_entered"]
 [connection signal="timeout" from="lights/flicker1" to="." method="_on_flicker_1_timeout"]

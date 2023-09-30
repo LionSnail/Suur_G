@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cydpytyjbo3ts"
-path="res://.godot/imported/characterworried2.png-289354a0f469abb1a43f55ed30a7f869.ctex"
+uid="uid://ndms1mfwin2g"
+path="res://.godot/imported/character2.png-104bded63983869e5150f4b51b458799.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Artwork/Ship/characterworried2.png"
-dest_files=["res://.godot/imported/characterworried2.png-289354a0f469abb1a43f55ed30a7f869.ctex"]
+source_file="res://Artwork/Ship/character/character2.png"
+dest_files=["res://.godot/imported/character2.png-104bded63983869e5150f4b51b458799.ctex"]
 
 [params]
 

@@ -11,6 +11,7 @@ var difficulty = 0.1
 
 func _ready():
 	current = "Oxygen"
+	print()
 
 func _physics_process(delta):
 	update_ui()
@@ -63,8 +64,6 @@ func remove_oxygen(amount):
 func update_ui():
 	$modules/Oxygen/icon/bar/ProgressBar.value = oxy_amount
 	$modules/Engine/icon/bar/ProgressBar.value = engine_amount
-	
-
 
 
 
@@ -72,6 +71,7 @@ func _on_shiphull_area_entered(area):
 	if area.is_in_group("Enemy"):
 		area.latch()
 		screen_shake(area.speed)
+		$baseart.worry()
 		hp -= area.hp
 		if hp <= 0:
 			get_parent().end_game(1)

@@ -1,21 +1,60 @@
-[gd_scene load_steps=9 format=3 uid="uid://d1cu6bpedbs5g"]
+[gd_scene load_steps=16 format=3 uid="uid://bxcqgdqnhcqho"]
 
-[ext_resource type="Texture2D" uid="uid://7mnx1wi8rod0" path="res://Artwork/Ship/character.png" id="1_6xu01"]
+[ext_resource type="Script" path="res://Main/Player/baseart_script.gd" id="1_0mw0o"]
 [ext_resource type="Texture2D" uid="uid://c88hh3j21hq73" path="res://Artwork/Ship/shipbg.png" id="2_gj7r1"]
+[ext_resource type="Texture2D" uid="uid://7mnx1wi8rod0" path="res://Artwork/Ship/character/character.png" id="2_q54b1"]
 [ext_resource type="Texture2D" uid="uid://3grcf04bpwoi" path="res://Artwork/Ship/shipseat.png" id="3_1ovpl"]
+[ext_resource type="Texture2D" uid="uid://bwwl7c4r3yex4" path="res://Artwork/Ship/character/character3.png" id="3_mulp3"]
 [ext_resource type="Texture2D" uid="uid://c5skrrrb8y41q" path="res://Artwork/Ship/shiphelmet.png" id="4_b314w"]
+[ext_resource type="Texture2D" uid="uid://ndms1mfwin2g" path="res://Artwork/Ship/character/character2.png" id="4_iuu80"]
+[ext_resource type="Texture2D" uid="uid://cob6d4mx2q8jm" path="res://Artwork/Ship/character/characterworried1.png" id="5_alsv3"]
 [ext_resource type="Texture2D" uid="uid://b14nhry3j51d2" path="res://Artwork/Ship/shipoxygen.png" id="5_aruot"]
 [ext_resource type="Texture2D" uid="uid://lvh2ojrptlal" path="res://Artwork/Ship/shipframe.png" id="6_cko1b"]
+[ext_resource type="Texture2D" uid="uid://cydpytyjbo3ts" path="res://Artwork/Ship/character/characterworried2.png" id="6_x7yof"]
 [ext_resource type="Texture2D" uid="uid://6aymchldthdm" path="res://Artwork/Ship/engine.png" id="7_fukjr"]
+[ext_resource type="Texture2D" uid="uid://bgv1rjdt5dmnm" path="res://Artwork/Ship/character/characterworried3.png" id="7_yk6hy"]
 [ext_resource type="Texture2D" uid="uid://djtwh5p7kur17" path="res://Artwork/Ship/shipwindow.png" id="8_p2hpw"]
 
-[node name="Node" type="Node"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_ko7vf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_q54b1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mulp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_iuu80")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_alsv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_x7yof")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_yk6hy")
+}],
+"loop": true,
+"name": &"worry",
+"speed": 5.0
+}]
 
-[node name="Character" type="Sprite2D" parent="."]
+[node name="baseart" type="Node2D"]
+script = ExtResource("1_0mw0o")
+
+[node name="Character" type="AnimatedSprite2D" parent="."]
 z_index = 3
 position = Vector2(-3, 41)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_6xu01")
+sprite_frames = SubResource("SpriteFrames_ko7vf")
+animation = &"worry"
 
 [node name="Shipbg" type="Sprite2D" parent="."]
 z_index = -1

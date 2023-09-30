@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ndms1mfwin2g"
-path="res://.godot/imported/character2.png-0fa1650c5800faf0ebc458736a622444.ctex"
+uid="uid://cpb10coi021hb"
+path="res://.godot/imported/button.png-c41861a001b10f6dd82350e2c474a07a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Artwork/Ship/character2.png"
-dest_files=["res://.godot/imported/character2.png-0fa1650c5800faf0ebc458736a622444.ctex"]
+source_file="res://Artwork/UI/button.png"
+dest_files=["res://.godot/imported/button.png-c41861a001b10f6dd82350e2c474a07a.ctex"]
 
 [params]
 
