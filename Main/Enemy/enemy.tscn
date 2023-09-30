@@ -1,16 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://d374y78o67ce6"]
+[gd_scene load_steps=5 format=3 uid="uid://d374y78o67ce6"]
 
 [ext_resource type="Texture2D" uid="uid://d71wjkqvdlsh" path="res://icon.svg" id="1_a6xpt"]
 [ext_resource type="Script" path="res://Main/Enemy/enemy_script.gd" id="1_uh8ad"]
+[ext_resource type="Resource" uid="uid://hfw3skngpcx0" path="res://Main/Enemy/resources/Enemy_basic.tres" id="2_03knv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_omlqy"]
-radius = 24.0
+radius = 40.0
 
 [node name="Enemy" type="Area2D"]
 script = ExtResource("1_uh8ad")
+stats = ExtResource("2_03knv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_a6xpt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_omlqy")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_a6xpt")
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

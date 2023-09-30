@@ -1,11 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5eymjwuxf6nj"]
+[gd_scene load_steps=4 format=3 uid="uid://c5eymjwuxf6nj"]
+
+[ext_resource type="Script" path="res://Main/Player/spaceship/machines.gd" id="1_vrb8q"]
+[ext_resource type="Texture2D" uid="uid://d71wjkqvdlsh" path="res://icon.svg" id="1_xg8i6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7tfec"]
 radius = 32.0
 
 [node name="Oxygen" type="Area2D"]
+script = ExtResource("1_vrb8q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_7tfec")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.0117647, 0.403922, 1, 1)
+texture = ExtResource("1_xg8i6")

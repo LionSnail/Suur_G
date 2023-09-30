@@ -1,7 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://bfoc7jybdd38h"]
+[gd_scene load_steps=3 format=3 uid="uid://bfoc7jybdd38h"]
 
 [ext_resource type="PackedScene" uid="uid://clpgyc6slyw0j" path="res://Main/Player/spaceship/spaceship.tscn" id="1_er61o"]
+[ext_resource type="PackedScene" uid="uid://cepqr3bqc26h7" path="res://Main/Enemy/enemy_spawner.tscn" id="3_f8fsi"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Spaceship" parent="." instance=ExtResource("1_er61o")]
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="spawners" type="Node" parent="."]
+
+[node name="Enemy_spawner" parent="spawners" instance=ExtResource("3_f8fsi")]
+position = Vector2(896, 0)
+dir_x = -1
+
+[node name="Enemy_spawner2" parent="spawners" instance=ExtResource("3_f8fsi")]
+position = Vector2(-896, 0)
+dir_x = 1
