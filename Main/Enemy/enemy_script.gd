@@ -2,20 +2,15 @@ extends Area2D
 
 var is_mouse = false
 var on_guns = false
-@export var stats : Resource
 
-var hp
-var speed
-var idle_sprite
-var latch_sprite
+@export var hp : int
+@export var speed : float
+#var latch_sprite
 
 var dir_x = 0
 
 func _ready():
-	hp = stats.hp
-	speed = stats.speed
-	idle_sprite = stats.sprite_idle
-	latch_sprite = stats.sprite_latch
+#	latch_sprite = stats.sprite_latch
 	
 	$Sprite2D.play("default")
 	
@@ -25,15 +20,17 @@ func _ready():
 
 
 func die():
+	queue_free()
 #	$AnimationPlayer.play("death")
 	await get_tree().create_timer(1).timeout
 	queue_free()
 
 
 func _physics_process(delta):
-	move_local_x(dir_x)
+	move_local_x(dir_x * speed)
 	
 	if Input.is_action_just_pressed("click") and is_mouse:
+
 		hp -= 1
 		if hp <= 0:
 			die()

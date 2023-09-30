@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://bap218pdvsr3x"]
+
+[ext_resource type="Script" path="res://Main/Enemy/enemy_script.gd" id="1_iumnb"]
+[ext_resource type="Texture2D" uid="uid://orq71bckvjk3" path="res://Artwork/Aliens/alien2.png" id="2_j1y35"]
+[ext_resource type="Texture2D" uid="uid://bwqp8n7iea50m" path="res://Artwork/Aliens/alien22.png" id="3_ksheg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ierr5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_j1y35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ksheg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="enemy_speedy" type="Area2D" groups=["Enemy"]]
+script = ExtResource("1_iumnb")
+hp = 1
+speed = 4.0
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.299306, 0.3)
+sprite_frames = SubResource("SpriteFrames_ierr5")
+frame = 1
+frame_progress = 0.865445
+flip_h = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(16, -8, -16, 0, -40, 0, -48, 16, -24, 32, 0, 32, 24, 24, 32, 8, 48, 0, 40, -24, 24, -24)
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
