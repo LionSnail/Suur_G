@@ -17,12 +17,14 @@ func _ready():
 func _physics_process(delta):
 	update_ui()
 	
-	
 	difficulty += 0.0005
 
 func flickering():
 	if not big_flick:
 		$lights/PointLight2D.energy = randf_range(0.00, 0.2)
+	
+	$lights/smalllights/smollight1.energy = randi_range(0,1)
+	$lights/smalllights/smollight2.energy = randi_range(0,1)
 
 func click(current):
 	match current:
@@ -72,13 +74,27 @@ func update_ui():
 func _on_shiphull_area_entered(area):
 	if area.is_in_group("Enemy"):
 		area.latch()
+		
 		screen_shake(area.speed)
 		big_flicker()
 		$baseart.worry()
+		
+		
 		hp -= area.hp
+		add_cracks(hp)
 		print(hp)
 		if hp <= 0:
 			get_parent().end_game(1)
+
+func add_cracks(hp):
+	if hp <= 8:
+		$crack_places/pos1.visible = true
+	if hp <= 6:
+		$crack_places/pos2.visible = true
+	if hp <= 4:
+		$crack_places/pos3.visible = true
+	if hp <= 2:
+		$crack_places/pos4.visible = true
 
 func big_flicker():
 	big_flick = true

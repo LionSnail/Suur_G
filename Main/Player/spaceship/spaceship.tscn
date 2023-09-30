@@ -65,6 +65,25 @@ position = Vector2(185, 128)
 color = Color(1, 0.941176, 0.141176, 1)
 texture = ExtResource("6_e5rgy")
 
+[node name="smollight1" type="PointLight2D" parent="lights/smalllights"]
+position = Vector2(115, 22)
+color = Color(0, 0, 1, 1)
+texture = ExtResource("6_e5rgy")
+texture_scale = 0.3
+
+[node name="PointLight2D" type="PointLight2D" parent="lights/smalllights/smollight1"]
+color = Color(0, 0, 1, 1)
+energy = 16.0
+blend_mode = 2
+texture = ExtResource("6_e5rgy")
+texture_scale = 0.05
+
+[node name="smollight2" type="PointLight2D" parent="lights/smalllights"]
+position = Vector2(-138, -13)
+color = Color(0, 1, 0, 1)
+texture = ExtResource("6_e5rgy")
+texture_scale = 0.1
+
 [node name="flicker1" type="Timer" parent="lights"]
 wait_time = 0.05
 autostart = true
@@ -94,6 +113,24 @@ offset_left = -768.0
 offset_top = -336.0
 offset_right = -768.0
 offset_bottom = -336.0
+
+[node name="crack_places" type="Node2D" parent="."]
+
+[node name="pos1" type="Node2D" parent="crack_places"]
+visible = false
+position = Vector2(-248, -128)
+
+[node name="pos2" type="Node2D" parent="crack_places"]
+visible = false
+position = Vector2(200, -168)
+
+[node name="pos3" type="Node2D" parent="crack_places"]
+visible = false
+position = Vector2(136, 272)
+
+[node name="pos4" type="Node2D" parent="crack_places"]
+visible = false
+position = Vector2(-248, 232)
 
 [connection signal="area_entered" from="shiphull" to="." method="_on_shiphull_area_entered"]
 [connection signal="timeout" from="lights/flicker1" to="." method="_on_flicker_1_timeout"]
