@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://clpgyc6slyw0j"]
+[gd_scene load_steps=9 format=3 uid="uid://clpgyc6slyw0j"]
 
 [ext_resource type="Script" path="res://Main/Player/spaceship/spaceship.gd" id="1_5cwwt"]
+[ext_resource type="PackedScene" uid="uid://b756afblp7a8e" path="res://Main/UI/pause.tscn" id="2_ilkpa"]
 [ext_resource type="PackedScene" uid="uid://bhkwwjwq1tq6q" path="res://Main/UI/textbox.tscn" id="2_xvprj"]
 [ext_resource type="PackedScene" uid="uid://dqj2xbfspjk3a" path="res://Main/Player/spaceship/machines/engine.tscn" id="3_q03dr"]
 [ext_resource type="PackedScene" uid="uid://c5eymjwuxf6nj" path="res://Main/Player/spaceship/machines/oxygen.tscn" id="4_ar1wm"]
@@ -14,10 +15,6 @@ polygon = PackedVector2Array(-197, -291, -100, -349, 30, -355, 139, -316, 226, -
 script = ExtResource("1_5cwwt")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-
-[node name="Textbox" parent="Camera2D" instance=ExtResource("2_xvprj")]
-offset_top = -336.0
-offset_bottom = -336.0
 
 [node name="modules" type="Node2D" parent="."]
 z_index = 2
@@ -82,6 +79,21 @@ texture = ExtResource("6_e5rgy")
 metadata/_edit_lock_ = true
 
 [node name="baseart" parent="." instance=ExtResource("5_olv3l")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="Pause" parent="CanvasLayer" instance=ExtResource("2_ilkpa")]
+visible = false
+custom_minimum_size = Vector2(500, 500)
+offset_top = -384.0
+offset_bottom = -384.0
+
+[node name="Textbox" parent="CanvasLayer" instance=ExtResource("2_xvprj")]
+offset_left = -768.0
+offset_top = -336.0
+offset_right = -768.0
+offset_bottom = -336.0
 
 [connection signal="area_entered" from="shiphull" to="." method="_on_shiphull_area_entered"]
 [connection signal="timeout" from="lights/flicker1" to="." method="_on_flicker_1_timeout"]

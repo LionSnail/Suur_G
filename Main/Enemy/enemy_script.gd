@@ -30,11 +30,17 @@ func _physics_process(delta):
 	move_local_x(dir_x * speed)
 	
 	if Input.is_action_just_pressed("click") and is_mouse:
-
 		hp -= 1
 		if hp <= 0:
 			die()
-
+		
+		speed = -speed
+		$Sprite2D.modulate = Color.BLACK
+		await  get_tree().create_timer(0.1).timeout
+		speed = -speed
+		$Sprite2D.modulate = Color.WHITE
+		
+		
 
 
 

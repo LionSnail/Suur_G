@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://Main/UI/textbox_script.gd" id="1_g43a8"]
 
 [node name="Textbox" type="Control"]
+process_mode = 1
 z_index = 5
 layout_mode = 3
 anchors_preset = 5
@@ -41,3 +42,9 @@ grow_horizontal = 2
 grow_vertical = 2
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
