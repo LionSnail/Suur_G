@@ -1,14 +1,38 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0kie7e7shgcq"]
+[gd_scene load_steps=4 format=3 uid="uid://c0kie7e7shgcq"]
 
 [ext_resource type="Script" path="res://Main/Player/spaceship/machines/highlight.gd" id="1_fvvhg"]
+[ext_resource type="Texture2D" uid="uid://b14nhry3j51d2" path="res://Artwork/Ship/shipoxygen.png" id="2_ukem6"]
+[ext_resource type="Texture2D" uid="uid://d30ej1r5fn2u0" path="res://Artwork/Ship/oxygen bar.png" id="3_i84ey"]
 
-[node name="icon" type="Node2D"]
+[node name="icon_oxy" type="Node2D"]
 script = ExtResource("1_fvvhg")
 
 [node name="highlight" type="Sprite2D" parent="."]
 visible = false
 modulate = Color(100, 100, 100, 1)
 z_index = -1
-scale = Vector2(1.1, 1.1)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_ukem6")
 
 [node name="top" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ukem6")
+
+[node name="bar" type="Node2D" parent="."]
+position = Vector2(-72, 0)
+
+[node name="OxygenBar" type="Sprite2D" parent="bar"]
+position = Vector2(73, -8)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_i84ey")
+
+[node name="ProgressBar" type="ProgressBar" parent="bar"]
+modulate = Color(0, 1, 1, 1)
+offset_left = 95.0
+offset_top = -70.0
+offset_right = 106.0
+offset_bottom = 101.0
+rotation = -0.139626
+value = 69.0
+fill_mode = 3
+show_percentage = false

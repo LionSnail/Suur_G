@@ -11,11 +11,11 @@ icon = ExtResource("2_fg3f7")
 [node name="icon" parent="." instance=ExtResource("2_bawbi")]
 z_index = 4
 
-[node name="Timer" type="Timer" parent="."]
-autostart = true
-
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-66, -105, -32, -129, 23, -135, 53, -108, 59, -17, 69, 100, 69, 137, 62, 144, 33, 114, -19, 51, -53, -32)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

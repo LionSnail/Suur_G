@@ -7,7 +7,7 @@ var type = name
 @export var icon : CompressedTexture2D 
 
 func _ready():
-	$icon.add_icon(icon)
+	pass
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("click") and is_mouse:
@@ -33,5 +33,5 @@ func _on_timer_timeout():
 	if name == "Oxygen":
 		get_parent().get_parent().remove_oxygen(get_tree().get_root().get_node("/root/Autoload").oxy_num)
 		
-	if name == "Engine":
+	elif name == "Engine":
 		get_parent().get_parent().remove_engine(get_tree().get_root().get_node("/root/Autoload").engine_num)

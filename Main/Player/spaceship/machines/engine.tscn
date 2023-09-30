@@ -1,21 +1,21 @@
 [gd_scene load_steps=4 format=3 uid="uid://dqj2xbfspjk3a"]
 
 [ext_resource type="Script" path="res://Main/Player/spaceship/machines/machines.gd" id="1_qbidj"]
-[ext_resource type="PackedScene" uid="uid://c0kie7e7shgcq" path="res://Main/Player/spaceship/machines/machinesprite.tscn" id="2_jaxa6"]
 [ext_resource type="Texture2D" uid="uid://6aymchldthdm" path="res://Artwork/Ship/engine.png" id="2_s8wyb"]
+[ext_resource type="PackedScene" uid="uid://dxma02lvnmeng" path="res://Main/Player/spaceship/machines/machinesprite_engine.tscn" id="3_7wnkn"]
 
 [node name="Engine" type="Area2D"]
 script = ExtResource("1_qbidj")
 icon = ExtResource("2_s8wyb")
 
-[node name="icon" parent="." instance=ExtResource("2_jaxa6")]
-z_index = 2
-
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="icon" parent="." instance=ExtResource("3_7wnkn")]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-28, -76, 42, -75, 39, -6, 29, 47, 16, 78, -37, 63, -20, -22)
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

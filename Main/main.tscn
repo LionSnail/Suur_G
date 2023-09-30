@@ -8,6 +8,7 @@
 [node name="Main" type="Node2D"]
 
 [node name="Spaceship" parent="." instance=ExtResource("1_er61o")]
+scale = Vector2(1, 1.01056)
 
 [node name="Enemies" type="Node" parent="."]
 
