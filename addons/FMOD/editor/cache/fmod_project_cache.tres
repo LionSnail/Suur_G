@@ -1,13 +1,13 @@
 [gd_resource type="ProjectCache" load_steps=9 format=3 uid="uid://dejcbqw7mjaph"]
 
-[ext_resource type="BankAsset" uid="uid://cv0ogyleqic3b" path="res://addons/FMOD/editor/resources/banks/{3050b558-214b-4c81-be02-4ff0cad1614c}.tres" id="1_pt8ny"]
-[ext_resource type="BankAsset" uid="uid://dla70070w4is3" path="res://addons/FMOD/editor/resources/banks/{a84d958c-5030-00c3-384b-c50e3b2267d4}.tres" id="2_otdlj"]
-[ext_resource type="BankAsset" uid="uid://b5ahpb1v6h7eu" path="res://addons/FMOD/editor/resources/banks/{edbd8dcb-0752-4a13-8d20-26277182839a}.tres" id="3_jvkqn"]
-[ext_resource type="BankAsset" uid="uid://d10c2i08vtu64" path="res://addons/FMOD/editor/resources/banks/{13cfbab9-cb0c-4ba4-9316-6d7fe24906ee}.tres" id="4_3irjc"]
-[ext_resource type="BankAsset" uid="uid://u1paqu5it1mm" path="res://addons/FMOD/editor/resources/banks/{dc3fb0fd-333a-4029-bd03-284f5d60f103}.tres" id="5_ostdl"]
-[ext_resource type="BusAsset" uid="uid://dtmm4nd5ekugh" path="res://addons/FMOD/editor/resources/busses/{9d74026d-f84a-41a6-bc16-af8a405a2dcc}.tres" id="6_jny5d"]
-[ext_resource type="BusAsset" uid="uid://du1lbyi31quxx" path="res://addons/FMOD/editor/resources/busses/{76b8c35a-88b3-4f36-b5c9-092a67152f6e}.tres" id="7_hwsxp"]
-[ext_resource type="EventAsset" uid="uid://dgd04noaoinxg" path="res://addons/FMOD/editor/resources/events/{d6c5ff18-659e-4597-bc0b-e7096248beba}.tres" id="8_obxww"]
+[ext_resource type="MissingResource" uid="uid://cv0ogyleqic3b" path="res://addons/FMOD/editor/resources/banks/{3050b558-214b-4c81-be02-4ff0cad1614c}.tres" id="1_pt8ny"]
+[ext_resource type="MissingResource" uid="uid://dla70070w4is3" path="res://addons/FMOD/editor/resources/banks/{a84d958c-5030-00c3-384b-c50e3b2267d4}.tres" id="2_otdlj"]
+[ext_resource type="MissingResource" uid="uid://b5ahpb1v6h7eu" path="res://addons/FMOD/editor/resources/banks/{edbd8dcb-0752-4a13-8d20-26277182839a}.tres" id="3_jvkqn"]
+[ext_resource type="MissingResource" uid="uid://d10c2i08vtu64" path="res://addons/FMOD/editor/resources/banks/{13cfbab9-cb0c-4ba4-9316-6d7fe24906ee}.tres" id="4_3irjc"]
+[ext_resource type="MissingResource" uid="uid://u1paqu5it1mm" path="res://addons/FMOD/editor/resources/banks/{dc3fb0fd-333a-4029-bd03-284f5d60f103}.tres" id="5_ostdl"]
+[ext_resource type="MissingResource" uid="uid://dtmm4nd5ekugh" path="res://addons/FMOD/editor/resources/busses/{9d74026d-f84a-41a6-bc16-af8a405a2dcc}.tres" id="6_jny5d"]
+[ext_resource type="MissingResource" uid="uid://du1lbyi31quxx" path="res://addons/FMOD/editor/resources/busses/{76b8c35a-88b3-4f36-b5c9-092a67152f6e}.tres" id="7_hwsxp"]
+[ext_resource type="MissingResource" uid="uid://dgd04noaoinxg" path="res://addons/FMOD/editor/resources/events/{d6c5ff18-659e-4597-bc0b-e7096248beba}.tres" id="8_obxww"]
 
 [resource]
 banks = {
