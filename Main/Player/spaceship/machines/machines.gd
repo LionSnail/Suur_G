@@ -1,6 +1,5 @@
 extends Area2D
 
-
 var is_mouse = false
 var active = false
 var type = name
@@ -15,11 +14,6 @@ func _physics_process(delta):
 
 
 
-
-
-func highlight(enabled):
-	pass
-
 func _on_mouse_entered():
 	is_mouse = true
 	get_node("icon").highlight(true)
@@ -32,4 +26,7 @@ func _on_mouse_exited():
 
 func _on_timer_timeout():
 	if name == "Oxygen":
-		get_parent().get_parent().remove_oxygen(2)
+		get_parent().get_parent().remove_oxygen(get_tree().get_root().get_node("/root/Autoload").oxy_num)
+		
+	if name == "Engine":
+		get_parent().get_parent().remove_engine(get_tree().get_root().get_node("/root/Autoload").engine_num)

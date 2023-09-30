@@ -17,6 +17,9 @@ func _ready():
 	idle_sprite = stats.sprite_idle
 	latch_sprite = stats.sprite_latch
 	
+	if dir_x == -1:
+		$Sprite2D.flip_h = true
+	
 
 
 func _physics_process(delta):

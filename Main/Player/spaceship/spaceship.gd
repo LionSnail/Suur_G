@@ -18,8 +18,7 @@ func click(current):
 	match current:
 		"Oxygen":
 			oxy_amount = clamp(oxy_amount + 1, 0, 100)
-			print(oxy_amount)
-		
+			
 		"Engine":
 			engine_amount = clamp(engine_amount + 1, 0, 100)
 			
@@ -37,6 +36,10 @@ func set_current(type):
 		if child.name != current:
 			child.active = false
 
+
+func remove_engine(amount):
+	engine_amount -= amount
+	pass
 
 func remove_oxygen(amount):
 	oxy_amount -= amount
