@@ -1,36 +1,37 @@
 [gd_scene load_steps=5 format=3 uid="uid://bw032l5w8g3qu"]
 
 [ext_resource type="Script" path="res://Main/Enemy/enemy_script.gd" id="1_es5vc"]
-[ext_resource type="Texture2D" uid="uid://c052k82kwddkk" path="res://Artwork/Aliens/alien1.png" id="2_tunjq"]
-[ext_resource type="Texture2D" uid="uid://f58l0pdca1un" path="res://Artwork/Aliens/alien12.png" id="3_srwt4"]
+[ext_resource type="Texture2D" uid="uid://b7harttm2ps4" path="res://Artwork/Aliens/alien3.png" id="2_5yj4i"]
+[ext_resource type="Texture2D" uid="uid://5tow1wcfjaod" path="res://Artwork/Aliens/alien32.png" id="3_7abkm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ierr5"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_tunjq")
+"texture": ExtResource("2_5yj4i")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_srwt4")
+"texture": ExtResource("3_7abkm")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[node name="enemy_basic" type="Area2D" groups=["Enemy"]]
+[node name="enemy_chonk" type="Area2D" groups=["Enemy"]]
 script = ExtResource("1_es5vc")
-hp = 1
-speed = 1.0
+hp = 5
+speed = 0.5
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.299306, 0.3)
 sprite_frames = SubResource("SpriteFrames_ierr5")
-frame_progress = 0.210462
+frame_progress = 0.696808
 flip_h = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(0, -40, -16, 0, -40, 0, -56, 32, -48, 48, -24, 56, 16, 56, 32, 40, 24, 16, 48, 0, 48, -24, 32, -40)
+position = Vector2(-17, -5)
+polygon = PackedVector2Array(-55, -40, -39, -17, -66, -3, -79, 42, -53, 82, 3, 99, 49, 95, 84, 81, 103, 52, 95, 4, 65, -15, 38, -21, 61, -24, 71, -46, 42, -87, -32, -87)
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
