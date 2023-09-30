@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene load_steps=9 format=3 uid="uid://cet08ei16o415"]
 
 [ext_resource type="Script" path="res://Main/UI/main_menu/menu_script.gd" id="1_i6gwu"]
@@ -8,6 +9,12 @@
 [ext_resource type="BankAsset" uid="uid://cv0ogyleqic3b" path="res://addons/FMOD/editor/resources/banks/{3050b558-214b-4c81-be02-4ff0cad1614c}.tres" id="5_h0jyg"]
 [ext_resource type="BankAsset" uid="uid://dla70070w4is3" path="res://addons/FMOD/editor/resources/banks/{a84d958c-5030-00c3-384b-c50e3b2267d4}.tres" id="6_ygu3u"]
 [ext_resource type="Script" path="res://Main/UI/main_menu/FMOD_audio.gd" id="8_1p6v5"]
+=======
+[gd_scene load_steps=3 format=3 uid="uid://cet08ei16o415"]
+
+[ext_resource type="Script" path="res://Main/UI/main_menu/menu_script.gd" id="1_i6gwu"]
+[ext_resource type="PackedScene" uid="uid://bvrns7nrll4uu" path="res://Main/UI/main_menu/settings.tscn" id="2_og6hp"]
+>>>>>>> 6bf1ea13017fd2d6c470bf02b7f9822d5bb7c653
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -50,6 +57,7 @@ layout_mode = 2
 layout_mode = 2
 text = "Quit"
 
+<<<<<<< HEAD
 [node name="StudioEventEmitter3D" type="StudioEventEmitter3D" parent="."]
 event = ExtResource("2_sttdg")
 preload_samples = true
@@ -70,5 +78,16 @@ play_event = 2
 event = ExtResource("2_sttdg")
 script = ExtResource("8_1p6v5")
 event = ExtResource("2_sttdg")
+=======
+[node name="Settings" parent="." instance=ExtResource("2_og6hp")]
+visible = false
+layout_mode = 1
+>>>>>>> 6bf1ea13017fd2d6c470bf02b7f9822d5bb7c653
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="value_changed" from="Settings/VBoxContainer/Panel/VBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="Settings/VBoxContainer/Panel/VBoxContainer/done" to="." method="_on_done_pressed"]
+
+[editable path="Settings"]

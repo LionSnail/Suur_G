@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://clpgyc6slyw0j"]
 
 [ext_resource type="Script" path="res://Main/Player/spaceship/spaceship.gd" id="1_5cwwt"]
-[ext_resource type="Texture2D" uid="uid://cl240otcdff4x" path="res://Artwork/concept.png" id="1_cwa5u"]
+[ext_resource type="Texture2D" uid="uid://cl240otcdff4x" path="res://Artwork/placeholders/concept.png" id="2_ujddp"]
 [ext_resource type="PackedScene" uid="uid://dqj2xbfspjk3a" path="res://Main/Player/spaceship/machines/engine.tscn" id="3_q03dr"]
 [ext_resource type="PackedScene" uid="uid://c5eymjwuxf6nj" path="res://Main/Player/spaceship/machines/oxygen.tscn" id="4_ar1wm"]
 [ext_resource type="PackedScene" uid="uid://chneqyyjnlx3b" path="res://Main/Player/spaceship/machines/repair.tscn" id="5_8unqj"]
@@ -11,7 +11,7 @@ script = ExtResource("1_5cwwt")
 
 [node name="Concept" type="Sprite2D" parent="."]
 scale = Vector2(0.18, 0.18)
-texture = ExtResource("1_cwa5u")
+texture = ExtResource("2_ujddp")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -25,3 +25,10 @@ position = Vector2(-176, 184)
 
 [node name="Repair" parent="modules" instance=ExtResource("5_8unqj")]
 position = Vector2(168, -24)
+
+[node name="shiphull" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="shiphull"]
+polygon = PackedVector2Array(-208, -328, -272, -184, -312, 0, -288, 200, -240, 320, -208, 360, 240, 360, 256, 312, 280, 168, 296, 0, 272, -200, 200, -320, 184, -336, -208, -328, -160, -280, 160, -280, 264, -8, 208, 312, -200, 312, -240, 96, -232, -136, -160, -280)
+
+[connection signal="area_entered" from="shiphull" to="." method="_on_shiphull_area_entered"]

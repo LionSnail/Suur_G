@@ -17,6 +17,9 @@ func _ready():
 	idle_sprite = stats.sprite_idle
 	latch_sprite = stats.sprite_latch
 	
+	if dir_x == -1:
+		$Sprite2D.flip_h = true
+	
 
 
 func _physics_process(delta):
@@ -28,7 +31,9 @@ func _physics_process(delta):
 			queue_free()
 
 
-
+func latch():
+	#change sprite
+	dir_x = 0
 
 func _on_mouse_entered():
 	is_mouse = true

@@ -11,22 +11,24 @@ func _ready():
 	current = "Oxygen"
 
 func _physics_process(delta):
+	pass
+
+
+func click(current):
 	match current:
 		"Oxygen":
-			oxy_amount += 1 * delta
-			oxy_amount = clamp(oxy_amount, 0, 100)
-		
+			oxy_amount = clamp(oxy_amount + 1, 0, 100)
+			
 		"Engine":
-			engine_amount += 1 * delta
-			engine_amount = clamp(engine_amount, 0, 100)
+			engine_amount = clamp(engine_amount + 1, 0, 100)
 			
 		"Repair":
-			repair_amount += 1 * delta
-			engine_amount = clamp(engine_amount, 0, 100)
+			repair_amount = clamp(repair_amount + 1, 0, 100)
 			
 		"Guns":
 			pass
-	print(current)
+	
+
 
 func set_current(type):
 	current = type
@@ -34,3 +36,18 @@ func set_current(type):
 		if child.name != current:
 			child.active = false
 
+
+func remove_engine(amount):
+	engine_amount -= amount
+	pass
+
+func remove_oxygen(amount):
+	oxy_amount -= amount
+	pass
+
+
+
+func _on_shiphull_area_entered(area):
+	if area.is_in_group("Enemy"):
+		area.latch()
+		print(area)
