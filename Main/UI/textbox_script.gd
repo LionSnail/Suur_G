@@ -18,6 +18,6 @@ func load_file(file):
 	end()
 
 func end():
-	pass
+	get_tree().get_root().get_node("Main").end_game(2)
 
 
