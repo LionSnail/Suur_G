@@ -12,13 +12,10 @@ func end_game(ending):
 	# ending 1, aliens destroy ship
 	$Fade_manager.fade_out_long()
 	await get_tree().create_timer(1).timeout
-	# ending 0, you have run out of fuel/engine
-	
 	
 	if ending == 1:
 		get_tree().change_scene_to_file(bad_ending)
 	
-	# ending 2, 3min has passed and you win!
 	if ending == 2:
 		get_tree().change_scene_to_file(good_ending)
 		

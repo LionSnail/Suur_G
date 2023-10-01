@@ -15,3 +15,8 @@ func _ready():
 		print(name)
 		$Fade_manager.fade_in_long()
 		AudioSingleton.fade_out_and_change_track(good_ending_music)
+
+func _physics_process(delta):
+	if Input.is_action_just_pressed("esc"):
+		get_tree().paused = true
+		get_node("Pause").visible = true
