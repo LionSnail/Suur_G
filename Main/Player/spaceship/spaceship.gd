@@ -30,14 +30,14 @@ func click(current):
 	match current:
 		"Oxygen":
 			# play oxygen click sound
-			
+			$SoundEventManager.play_sound("oxygen")
 			
 			oxy_amount = clamp(oxy_amount + 3, 0, 100)
 			
 			
 		"Engine":
 			# play engine click sound
-			
+			$SoundEventManager.play_sound("engine")
 			
 			engine_amount = clamp(engine_amount + 3, 0, 100)
 			

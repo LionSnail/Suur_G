@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cet08ei16o415"]
+[gd_scene load_steps=13 format=3 uid="uid://cet08ei16o415"]
 
 [ext_resource type="Script" path="res://Main/UI/main_menu/menu_script.gd" id="1_i6gwu"]
 [ext_resource type="PackedScene" uid="uid://bvrns7nrll4uu" path="res://Main/UI/main_menu/settings.tscn" id="2_og6hp"]
@@ -11,6 +11,7 @@
 [ext_resource type="BankAsset" uid="uid://d10c2i08vtu64" path="res://addons/FMOD/editor/resources/banks/{13cfbab9-cb0c-4ba4-9316-6d7fe24906ee}.tres" id="8_21t54"]
 [ext_resource type="BankAsset" uid="uid://u1paqu5it1mm" path="res://addons/FMOD/editor/resources/banks/{dc3fb0fd-333a-4029-bd03-284f5d60f103}.tres" id="9_cbohb"]
 [ext_resource type="Texture2D" uid="uid://b1pe063ppbh0x" path="res://Artwork/UI/menu.png" id="12_h8cs2"]
+[ext_resource type="EventAsset" uid="uid://bhbhdc4acduoh" path="res://addons/FMOD/editor/resources/events/{036b32d7-7710-404c-a5dd-f9d40f0d4ae7}.tres" id="12_letrl"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -143,6 +144,7 @@ texture = ExtResource("12_h8cs2")
 
 [node name="Node2D" type="Node2D" parent="."]
 script = ExtResource("4_jyenf")
+click_sound = ExtResource("12_letrl")
 
 [connection signal="pressed" from="CenterContainer/HBoxContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="CenterContainer/HBoxContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
