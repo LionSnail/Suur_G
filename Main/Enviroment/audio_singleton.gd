@@ -7,6 +7,7 @@ var game_music_path: String = "event:/Music/GameMainMelody"
 var bad_ending_boom_path: String = "event:/SFX/Bang!"
 
 var click_sound: String = "event:/UI/Click"
+var death_sound: String = "event:/SFX/EnemyDeath"
 
 var instance: EventInstance
 
@@ -33,6 +34,10 @@ func fade_out_and_change_track(new_track_path: String):
 
 func clicker():
 	FMODRuntime.play_one_shot_path(click_sound)
+	return 
+
+func deathsound():
+	FMODRuntime.play_one_shot_path(death_sound)
 	return 
 
 func stop_current():

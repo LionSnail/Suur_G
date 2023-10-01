@@ -12,7 +12,5 @@ func _ready():
 		AudioSingleton.fade_out_and_change_track(bad_ending_music)
 	
 	if name == "Good_ending":
-		
-		AudioSingleton.fade_out_and_change_track(good_ending_music)
 		$Fade_manager.fade_in_long()
-		
+		AudioSingleton.fade_out_and_change_track(good_ending_music)

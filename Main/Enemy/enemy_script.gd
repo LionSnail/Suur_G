@@ -18,9 +18,8 @@ func _ready():
 
 
 func die():
-	queue_free()
-#	$AnimationPlayer.play("death")
-	await get_tree().create_timer(1).timeout
+	# await get_tree().create_timer(0.1).timeout
+	AudioSingleton.deathsound()
 	queue_free()
 
 
