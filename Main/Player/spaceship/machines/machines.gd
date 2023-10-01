@@ -3,13 +3,13 @@ extends Area2D
 var is_mouse = false
 var active = false
 var type = name
-@export var DEBUG_BOOST = 50
+@export var DEBUG_BOOST = 40
 @export var icon : CompressedTexture2D 
 
 func _ready():
 	pass
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if Input.is_action_just_pressed("click") and is_mouse:
 		active = true
 		get_parent().get_parent().click(name)

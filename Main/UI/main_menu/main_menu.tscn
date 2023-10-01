@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cet08ei16o415"]
+[gd_scene load_steps=15 format=3 uid="uid://cet08ei16o415"]
 
 [ext_resource type="Script" path="res://Main/UI/main_menu/menu_script.gd" id="1_i6gwu"]
 [ext_resource type="PackedScene" uid="uid://bvrns7nrll4uu" path="res://Main/UI/main_menu/settings.tscn" id="2_og6hp"]
@@ -10,6 +10,7 @@
 [ext_resource type="BankAsset" uid="uid://d10c2i08vtu64" path="res://addons/FMOD/editor/resources/banks/{13cfbab9-cb0c-4ba4-9316-6d7fe24906ee}.tres" id="8_21t54"]
 [ext_resource type="BankAsset" uid="uid://u1paqu5it1mm" path="res://addons/FMOD/editor/resources/banks/{dc3fb0fd-333a-4029-bd03-284f5d60f103}.tres" id="9_cbohb"]
 [ext_resource type="Texture2D" uid="uid://b1pe063ppbh0x" path="res://Artwork/UI/menu.png" id="12_h8cs2"]
+[ext_resource type="PackedScene" uid="uid://6rh888bwbkee" path="res://Main/UI/main_menu/fade_manager.tscn" id="12_nxcat"]
 [ext_resource type="Script" path="res://Main/UI/main_menu/AudioBusInit.gd" id="13_iy5k2"]
 
 [sub_resource type="BusAsset" id="BusAsset_fqwnm"]
@@ -23,6 +24,7 @@ guid = "{cb9b9df3-7a8b-4965-9194-fbeed60cc515}"
 name = "SFX"
 
 [node name="Main Menu" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -148,7 +150,7 @@ bank_4 = ExtResource("9_cbohb")
 [node name="Menu" type="Sprite2D" parent="."]
 z_index = -2
 position = Vector2(768, 384)
-scale = Vector2(0.6, 0.5)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("12_h8cs2")
 
 [node name="Node2D" type="Node2D" parent="."]
@@ -157,6 +159,11 @@ texture = ExtResource("12_h8cs2")
 script = ExtResource("13_iy5k2")
 bus_asset_music = SubResource("BusAsset_fqwnm")
 bus_asset_sfx = SubResource("BusAsset_2c0hb")
+
+[node name="Fade_manager" parent="." instance=ExtResource("12_nxcat")]
+visible = false
+z_index = 1
+fade_in_start = true
 
 [connection signal="pressed" from="CenterContainer/HBoxContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="CenterContainer/HBoxContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]

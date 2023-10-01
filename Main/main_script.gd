@@ -21,7 +21,7 @@ func end_game(ending):
 		get_tree().change_scene_to_file(good_ending)
 		
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if Input.is_action_just_pressed("esc"):
 		get_tree().paused = true
 		get_node("Spaceship/CanvasLayer/Pause").visible = true

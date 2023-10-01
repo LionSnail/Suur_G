@@ -23,7 +23,7 @@ func die():
 	queue_free()
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	move_local_x(dir_x * speed)
 	
 	if Input.is_action_just_pressed("click") and is_mouse:

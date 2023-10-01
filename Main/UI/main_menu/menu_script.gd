@@ -6,10 +6,21 @@ extends Control
 var opening_scene = load("res://Main/main.tscn")
 @onready var audio = $Node2D
 
+func _ready():
+	pass
+	#$Fade_manager.visible = false
+
+
 func _on_start_pressed():
 	AudioSingleton.clicker()
 	await  get_tree().create_timer(0.01).timeout
+	$Fade_manager.fade_out()
+	await get_tree().create_timer(1).timeout
+	
+	
 	AudioSingleton.fade_out_and_change_track(game_music_path)
+	await get_tree().create_timer(0.01).timeout
+	
 	var x = get_parent().get_node("./Main Menu")
 	print(x)
 	get_tree().change_scene_to_file("res://Main/main.tscn")

@@ -14,7 +14,7 @@ func _ready():
 	current = "Oxygen"
 	print()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	update_ui()
 	
 	difficulty += 0.0005

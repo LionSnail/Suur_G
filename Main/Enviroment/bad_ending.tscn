@@ -8,6 +8,7 @@
 script = ExtResource("1_o4yuf")
 
 [node name="Fade_manager" parent="." instance=ExtResource("1_phx0a")]
+z_index = 3
 
 [node name="badsprite" type="Sprite2D" parent="."]
 texture = ExtResource("3_y6bnp")
