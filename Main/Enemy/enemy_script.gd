@@ -5,12 +5,10 @@ var on_guns = false
 
 @export var hp : int
 @export var speed : float
-#var latch_sprite
 
 var dir_x = 0
 
 func _ready():
-#	latch_sprite = stats.sprite_latch
 	
 	$Sprite2D.play("default")
 	
