@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://clpgyc6slyw0j"]
+[gd_scene load_steps=13 format=3 uid="uid://clpgyc6slyw0j"]
 
 [ext_resource type="Script" path="res://Main/Player/spaceship/spaceship.gd" id="1_5cwwt"]
 [ext_resource type="PackedScene" uid="uid://b756afblp7a8e" path="res://Main/UI/pause.tscn" id="2_ilkpa"]
@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://bxcqgdqnhcqho" path="res://Main/Player/baseart.tscn" id="5_olv3l"]
 [ext_resource type="Texture2D" uid="uid://d1f4y3i5tu4fn" path="res://Artwork/enviroment/light.png" id="6_e5rgy"]
 [ext_resource type="Script" path="res://Main/Player/spaceship/SoundEventManager.gd" id="8_24l55"]
+[ext_resource type="EventAsset" uid="uid://eh2a3cvkf5yy" path="res://addons/FMOD/editor/resources/events/{894a514f-a0d3-4d23-aeb2-a7dcb7391025}.tres" id="9_0senu"]
+[ext_resource type="EventAsset" uid="uid://cinooqfngoq4u" path="res://addons/FMOD/editor/resources/events/{c2d4b715-c00c-4a4e-be62-5dc5eb114f56}.tres" id="10_exe85"]
+[ext_resource type="EventAsset" uid="uid://dij8n0owr0pfm" path="res://addons/FMOD/editor/resources/events/{d6abec2a-3039-4644-b6ff-e7222994f92d}.tres" id="11_1s1x7"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_s02re"]
 polygon = PackedVector2Array(-197, -291, -100, -349, 30, -355, 139, -316, 226, -161, 244, 1, 224, 185, 153, 315, 82, 385, -139, 382, -255, 248, -286, 93, -271, -78, -197, -300, -278, -356, -394, -102, -364, 200, -258, 473, -16, 480, 267, 401, 358, 95, 410, -199, 264, -367, 94, -432, -139, -406, -281, -347)
@@ -135,6 +138,9 @@ position = Vector2(-248, 232)
 
 [node name="SoundEventManager" type="Node2D" parent="."]
 script = ExtResource("8_24l55")
+oxygen_sound = ExtResource("9_0senu")
+engine_sound = ExtResource("10_exe85")
+hit_sound = ExtResource("11_1s1x7")
 
 [connection signal="area_entered" from="shiphull" to="." method="_on_shiphull_area_entered"]
 [connection signal="timeout" from="lights/flicker1" to="." method="_on_flicker_1_timeout"]

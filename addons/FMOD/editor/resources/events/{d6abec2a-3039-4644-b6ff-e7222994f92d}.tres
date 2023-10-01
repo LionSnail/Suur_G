@@ -1,0 +1,10 @@
+[gd_resource type="EventAsset" format=3 uid="uid://dij8n0owr0pfm"]
+
+[resource]
+is_3d = true
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/SFX/BangShipCollider"
+guid = "{d6abec2a-3039-4644-b6ff-e7222994f92d}"
+name = "BangShipCollider"

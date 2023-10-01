@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://bihgvxw7cbdnf"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/SFX/Bang!"
+guid = "{b9ef2da7-fd3e-4506-9241-9532af6694d5}"
+name = "Bang!"

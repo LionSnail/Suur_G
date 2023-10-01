@@ -96,7 +96,6 @@ func _on_shiphull_area_entered(area):
 		
 		hp -= area.hp
 		add_cracks(hp)
-		print(hp)
 		if hp <= 0:
 			get_parent().end_game(1)
 

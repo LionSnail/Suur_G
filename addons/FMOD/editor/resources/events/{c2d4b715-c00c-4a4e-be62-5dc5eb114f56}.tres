@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://cinooqfngoq4u"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/SFX/EngineFix"
+guid = "{c2d4b715-c00c-4a4e-be62-5dc5eb114f56}"
+name = "EngineFix"

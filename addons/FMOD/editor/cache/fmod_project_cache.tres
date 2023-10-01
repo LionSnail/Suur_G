@@ -1,4 +1,4 @@
-[gd_resource type="ProjectCache" load_steps=11 format=3 uid="uid://dejcbqw7mjaph"]
+[gd_resource type="ProjectCache" load_steps=17 format=3 uid="uid://dejcbqw7mjaph"]
 
 [ext_resource type="BankAsset" uid="uid://cv0ogyleqic3b" path="res://addons/FMOD/editor/resources/banks/{3050b558-214b-4c81-be02-4ff0cad1614c}.tres" id="1_pt8ny"]
 [ext_resource type="BankAsset" uid="uid://dla70070w4is3" path="res://addons/FMOD/editor/resources/banks/{a84d958c-5030-00c3-384b-c50e3b2267d4}.tres" id="2_otdlj"]
@@ -7,9 +7,15 @@
 [ext_resource type="BankAsset" uid="uid://u1paqu5it1mm" path="res://addons/FMOD/editor/resources/banks/{dc3fb0fd-333a-4029-bd03-284f5d60f103}.tres" id="5_ostdl"]
 [ext_resource type="BusAsset" uid="uid://dtmm4nd5ekugh" path="res://addons/FMOD/editor/resources/busses/{9d74026d-f84a-41a6-bc16-af8a405a2dcc}.tres" id="6_jny5d"]
 [ext_resource type="BusAsset" uid="uid://du1lbyi31quxx" path="res://addons/FMOD/editor/resources/busses/{76b8c35a-88b3-4f36-b5c9-092a67152f6e}.tres" id="7_hwsxp"]
-[ext_resource type="EventAsset" path="res://addons/FMOD/editor/resources/events/{24baf4ca-4b52-40fa-8d74-69e0317b2a98}.tres" id="8_5y10q"]
+[ext_resource type="EventAsset" uid="uid://ejcboufa5vjl" path="res://addons/FMOD/editor/resources/events/{24baf4ca-4b52-40fa-8d74-69e0317b2a98}.tres" id="8_5y10q"]
 [ext_resource type="EventAsset" uid="uid://dgd04noaoinxg" path="res://addons/FMOD/editor/resources/events/{d6c5ff18-659e-4597-bc0b-e7096248beba}.tres" id="8_obxww"]
-[ext_resource type="EventAsset" path="res://addons/FMOD/editor/resources/events/{036b32d7-7710-404c-a5dd-f9d40f0d4ae7}.tres" id="10_ieatl"]
+[ext_resource type="EventAsset" uid="uid://bihgvxw7cbdnf" path="res://addons/FMOD/editor/resources/events/{b9ef2da7-fd3e-4506-9241-9532af6694d5}.tres" id="10_gefl7"]
+[ext_resource type="EventAsset" uid="uid://bhbhdc4acduoh" path="res://addons/FMOD/editor/resources/events/{036b32d7-7710-404c-a5dd-f9d40f0d4ae7}.tres" id="10_ieatl"]
+[ext_resource type="EventAsset" uid="uid://dij8n0owr0pfm" path="res://addons/FMOD/editor/resources/events/{d6abec2a-3039-4644-b6ff-e7222994f92d}.tres" id="11_b7r36"]
+[ext_resource type="EventAsset" uid="uid://ceg7tol4seu64" path="res://addons/FMOD/editor/resources/events/{25c92611-7f9b-4e2f-a4d6-bc407d86e225}.tres" id="12_upvea"]
+[ext_resource type="EventAsset" uid="uid://cinooqfngoq4u" path="res://addons/FMOD/editor/resources/events/{c2d4b715-c00c-4a4e-be62-5dc5eb114f56}.tres" id="13_cp46d"]
+[ext_resource type="EventAsset" uid="uid://gqtfh5pm4ryn" path="res://addons/FMOD/editor/resources/events/{a069faf9-37d7-42cc-84df-11235a40608e}.tres" id="14_x3plf"]
+[ext_resource type="EventAsset" uid="uid://eh2a3cvkf5yy" path="res://addons/FMOD/editor/resources/events/{894a514f-a0d3-4d23-aeb2-a7dcb7391025}.tres" id="15_3g7hx"]
 
 [resource]
 banks = {
@@ -22,6 +28,12 @@ banks = {
 events = {
 "{036b32d7-7710-404c-a5dd-f9d40f0d4ae7}": ExtResource("10_ieatl"),
 "{24baf4ca-4b52-40fa-8d74-69e0317b2a98}": ExtResource("8_5y10q"),
+"{25c92611-7f9b-4e2f-a4d6-bc407d86e225}": ExtResource("12_upvea"),
+"{894a514f-a0d3-4d23-aeb2-a7dcb7391025}": ExtResource("15_3g7hx"),
+"{a069faf9-37d7-42cc-84df-11235a40608e}": ExtResource("14_x3plf"),
+"{b9ef2da7-fd3e-4506-9241-9532af6694d5}": ExtResource("10_gefl7"),
+"{c2d4b715-c00c-4a4e-be62-5dc5eb114f56}": ExtResource("13_cp46d"),
+"{d6abec2a-3039-4644-b6ff-e7222994f92d}": ExtResource("11_b7r36"),
 "{d6c5ff18-659e-4597-bc0b-e7096248beba}": ExtResource("8_obxww")
 }
 busses = {
@@ -75,6 +87,48 @@ event_tree = [{
 }],
 "item_type": 7,
 "node_name": "Music",
+"path": "",
+"resource": null
+}, {
+"children": [{
+"children": [],
+"item_type": 1,
+"node_name": "Bang!",
+"path": "event:/SFX/Bang!",
+"resource": ExtResource("10_gefl7")
+}, {
+"children": [],
+"item_type": 1,
+"node_name": "BangShipCollider",
+"path": "event:/SFX/BangShipCollider",
+"resource": ExtResource("11_b7r36")
+}, {
+"children": [],
+"item_type": 1,
+"node_name": "EnemyDeath",
+"path": "event:/SFX/EnemyDeath",
+"resource": ExtResource("12_upvea")
+}, {
+"children": [],
+"item_type": 1,
+"node_name": "EngineFix",
+"path": "event:/SFX/EngineFix",
+"resource": ExtResource("13_cp46d")
+}, {
+"children": [],
+"item_type": 1,
+"node_name": "LowOxygen",
+"path": "event:/SFX/LowOxygen",
+"resource": ExtResource("14_x3plf")
+}, {
+"children": [],
+"item_type": 1,
+"node_name": "OxygenTank",
+"path": "event:/SFX/OxygenTank",
+"resource": ExtResource("15_3g7hx")
+}],
+"item_type": 7,
+"node_name": "SFX",
 "path": "",
 "resource": null
 }, {
