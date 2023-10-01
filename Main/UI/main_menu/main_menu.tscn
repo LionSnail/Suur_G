@@ -161,7 +161,6 @@ bus_asset_music = SubResource("BusAsset_fqwnm")
 bus_asset_sfx = SubResource("BusAsset_2c0hb")
 
 [node name="Fade_manager" parent="." instance=ExtResource("12_nxcat")]
-visible = false
 z_index = 1
 fade_in_start = true
 

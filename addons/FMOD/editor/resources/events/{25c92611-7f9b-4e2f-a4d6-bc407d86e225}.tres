@@ -4,7 +4,7 @@
 is_3d = true
 is_oneshot = true
 min_distance = 1.0
-max_distance = 20.0
+max_distance = 50.0
 path = "event:/SFX/EnemyDeath"
 guid = "{25c92611-7f9b-4e2f-a4d6-bc407d86e225}"
 name = "EnemyDeath"
