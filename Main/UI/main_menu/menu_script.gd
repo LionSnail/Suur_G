@@ -8,7 +8,7 @@ var opening_scene = load("res://Main/main.tscn")
 
 func _ready():
 	AudioSingleton.fade_out_and_change_track(menu_music_path)
-	#$Fade_manager.visible = false
+	
 
 
 func _on_start_pressed():
