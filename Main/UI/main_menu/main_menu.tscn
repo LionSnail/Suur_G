@@ -1,9 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://cet08ei16o415"]
+[gd_scene load_steps=11 format=3 uid="uid://cet08ei16o415"]
 
 [ext_resource type="Script" path="res://Main/UI/main_menu/menu_script.gd" id="1_i6gwu"]
 [ext_resource type="PackedScene" uid="uid://bvrns7nrll4uu" path="res://Main/UI/main_menu/settings.tscn" id="2_og6hp"]
 [ext_resource type="Texture2D" uid="uid://cpb10coi021hb" path="res://Artwork/UI/button.png" id="2_vqmqh"]
-[ext_resource type="EventAsset" uid="uid://dgd04noaoinxg" path="res://addons/FMOD/editor/resources/events/{d6c5ff18-659e-4597-bc0b-e7096248beba}.tres" id="3_22tml"]
 [ext_resource type="Texture2D" uid="uid://ct0lbrlwp054" path="res://Artwork/UI/button_pressed.png" id="3_c4dsl"]
 [ext_resource type="Script" path="res://Main/UI/main_menu/FMOD_audio.gd" id="4_jyenf"]
 [ext_resource type="BankAsset" uid="uid://b5ahpb1v6h7eu" path="res://addons/FMOD/editor/resources/banks/{edbd8dcb-0752-4a13-8d20-26277182839a}.tres" id="5_r6k2f"]
@@ -114,13 +113,6 @@ vertical_alignment = 1
 visible = false
 layout_mode = 1
 
-[node name="StudioEventEmitter2D" type="StudioEventEmitter2D" parent="."]
-play_event = 2
-event = ExtResource("3_22tml")
-preload_samples = true
-script = ExtResource("4_jyenf")
-event = ExtResource("3_22tml")
-
 [node name="StudioBankLoader" type="StudioBankLoader" parent="."]
 load_on = 1
 num_banks = 5
@@ -129,6 +121,9 @@ bank_1 = ExtResource("6_jd11y")
 bank_2 = ExtResource("7_kkevt")
 bank_3 = ExtResource("8_21t54")
 bank_4 = ExtResource("9_cbohb")
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("4_jyenf")
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]

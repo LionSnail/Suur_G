@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://bhbhdc4acduoh"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/UI/Click"
+guid = "{036b32d7-7710-404c-a5dd-f9d40f0d4ae7}"
+name = "Click"

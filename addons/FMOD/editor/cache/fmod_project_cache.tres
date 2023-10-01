@@ -1,4 +1,4 @@
-[gd_resource type="ProjectCache" load_steps=9 format=3 uid="uid://dejcbqw7mjaph"]
+[gd_resource type="ProjectCache" load_steps=11 format=3 uid="uid://dejcbqw7mjaph"]
 
 [ext_resource type="BankAsset" uid="uid://cv0ogyleqic3b" path="res://addons/FMOD/editor/resources/banks/{3050b558-214b-4c81-be02-4ff0cad1614c}.tres" id="1_pt8ny"]
 [ext_resource type="BankAsset" uid="uid://dla70070w4is3" path="res://addons/FMOD/editor/resources/banks/{a84d958c-5030-00c3-384b-c50e3b2267d4}.tres" id="2_otdlj"]
@@ -7,7 +7,9 @@
 [ext_resource type="BankAsset" uid="uid://u1paqu5it1mm" path="res://addons/FMOD/editor/resources/banks/{dc3fb0fd-333a-4029-bd03-284f5d60f103}.tres" id="5_ostdl"]
 [ext_resource type="BusAsset" uid="uid://dtmm4nd5ekugh" path="res://addons/FMOD/editor/resources/busses/{9d74026d-f84a-41a6-bc16-af8a405a2dcc}.tres" id="6_jny5d"]
 [ext_resource type="BusAsset" uid="uid://du1lbyi31quxx" path="res://addons/FMOD/editor/resources/busses/{76b8c35a-88b3-4f36-b5c9-092a67152f6e}.tres" id="7_hwsxp"]
+[ext_resource type="EventAsset" uid="uid://ejcboufa5vjl" path="res://addons/FMOD/editor/resources/events/{24baf4ca-4b52-40fa-8d74-69e0317b2a98}.tres" id="8_5y10q"]
 [ext_resource type="EventAsset" uid="uid://dgd04noaoinxg" path="res://addons/FMOD/editor/resources/events/{d6c5ff18-659e-4597-bc0b-e7096248beba}.tres" id="8_obxww"]
+[ext_resource type="EventAsset" uid="uid://bhbhdc4acduoh" path="res://addons/FMOD/editor/resources/events/{036b32d7-7710-404c-a5dd-f9d40f0d4ae7}.tres" id="10_ieatl"]
 
 [resource]
 banks = {
@@ -18,6 +20,8 @@ banks = {
 "{edbd8dcb-0752-4a13-8d20-26277182839a}": ExtResource("3_jvkqn")
 }
 events = {
+"{036b32d7-7710-404c-a5dd-f9d40f0d4ae7}": ExtResource("10_ieatl"),
+"{24baf4ca-4b52-40fa-8d74-69e0317b2a98}": ExtResource("8_5y10q"),
 "{d6c5ff18-659e-4597-bc0b-e7096248beba}": ExtResource("8_obxww")
 }
 busses = {
@@ -59,12 +63,30 @@ event_tree = [{
 "children": [{
 "children": [],
 "item_type": 1,
+"node_name": "GameMainMelody",
+"path": "event:/Music/GameMainMelody",
+"resource": ExtResource("8_5y10q")
+}, {
+"children": [],
+"item_type": 1,
 "node_name": "MainMelody",
 "path": "event:/Music/MainMelody",
 "resource": ExtResource("8_obxww")
 }],
 "item_type": 7,
 "node_name": "Music",
+"path": "",
+"resource": null
+}, {
+"children": [{
+"children": [],
+"item_type": 1,
+"node_name": "Click",
+"path": "event:/UI/Click",
+"resource": ExtResource("10_ieatl")
+}],
+"item_type": 7,
+"node_name": "UI",
 "path": "",
 "resource": null
 }]

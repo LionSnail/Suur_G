@@ -1,8 +1,13 @@
 extends Control
 
+@export var menu_music_path: String = "event:/Music/MainMelody"
+@export var game_music_path: String = "event:/Music/GameMainMelody"
+
 var opening_scene = load("res://Main/main.tscn")
+@onready var audio = $Node2D
 
 func _on_start_pressed():
+	audio.fade_out_and_change_track(game_music_path)
 	get_tree().change_scene_to_file("res://Main/main.tscn")
 
 
