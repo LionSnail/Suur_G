@@ -87,6 +87,7 @@ func _on_shiphull_area_entered(area):
 	if area.is_in_group("Enemy"):
 		area.latch()
 		
+		$SoundEventManager.play_sound("hit")
 		remove_engine(15, true)
 		screen_shake(area.speed)
 		big_flicker()

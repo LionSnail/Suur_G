@@ -27,6 +27,6 @@ func end():
 
 func _on_timer_timeout():
 	if !tekst.is_empty():
-		$VBoxContainer/CenterContainer/Label.text = tekst.pop_front()
+		$VBoxContainer/Label.text = tekst.pop_front()
 	else:
 		end()
