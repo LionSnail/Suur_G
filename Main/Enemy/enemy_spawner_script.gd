@@ -10,11 +10,11 @@ var is_emitting = false
 
 func create_enemy(type):
 	var enemy_i
-	if type == 1:
+	if type <= 3:
 		enemy_i = enemy_basic.instantiate()
-	elif type == 2:
+	elif type <= 5:
 		enemy_i = enemy_speedy.instantiate()
-	elif type == 3:
+	elif type == 6:
 		enemy_i = enemy_chonk.instantiate()
 	
 	
@@ -25,6 +25,6 @@ func create_enemy(type):
 
 func _on_timer_timeout():
 	randomize()
-	var randnum = randi_range(1, 3)
+	var randnum = randi_range(1, 6)
 	create_enemy(randnum)
 

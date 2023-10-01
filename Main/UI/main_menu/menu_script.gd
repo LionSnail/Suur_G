@@ -13,8 +13,8 @@ func _on_start_pressed():
 
 
 func _on_settings_pressed():
-	$HBoxContainer.visible = false
-	$Settings.visible = true
+	$CenterContainer/HBoxContainer.visible = false
+	$CenterContainer/HBoxContainer/VBoxContainer/Settings.visible = true
 
 
 func _on_quit_pressed():
@@ -26,6 +26,6 @@ func _on_h_slider_value_changed(value):
 
 
 func _on_done_pressed():
-	$HBoxContainer.visible = true
-	$Settings.visible = false
+	$CenterContainer/HBoxContainer.visible = false
+	$CenterContainer/HBoxContainer/VBoxContainer/Settings.visible = true
 
