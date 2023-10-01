@@ -45,8 +45,8 @@ func _physics_process(delta):
 
 
 func latch():
-	#change sprite
 	dir_x = 0
+	queue_free()
 
 func _on_mouse_entered():
 	is_mouse = true

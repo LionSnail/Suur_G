@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Autoload="*res://Main/Autoload.gd"
 FMODRuntime="*res://addons/FMOD/runtime/fmod_runtime_manager.gd"
+AudioSingleton="*res://Main/Enviroment/audio_singleton.gd"
 
 [display]
 

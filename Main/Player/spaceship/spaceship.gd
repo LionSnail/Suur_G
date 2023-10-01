@@ -4,7 +4,7 @@ extends Node2D
 
 var oxy_amount = 100
 var engine_amount = 100
-var hp = 10
+var hp = 1
 var current = ""
 
 var difficulty = 0.1
@@ -73,6 +73,9 @@ func remove_engine(amount, flat_damage = false):
 
 func remove_oxygen(amount):
 	oxy_amount -= amount * difficulty
+	if oxy_amount < 26:
+		$SoundEventManager.play_sound("low_oxy")
+	
 	if oxy_amount <= 0:
 		get_parent().end_game(1)
 	

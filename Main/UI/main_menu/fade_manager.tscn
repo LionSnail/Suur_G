@@ -1,22 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://6rh888bwbkee"]
+[gd_scene load_steps=8 format=3 uid="uid://6rh888bwbkee"]
 
 [ext_resource type="Script" path="res://Main/UI/main_menu/fade_manager.gd" id="1_na020"]
 [ext_resource type="Texture2D" uid="uid://cpb10coi021hb" path="res://Artwork/UI/button.png" id="2_q2hox"]
-
-[sub_resource type="Animation" id="Animation_llb0d"]
-resource_name = "fade"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
 
 [sub_resource type="Animation" id="Animation_ojwqr"]
 length = 0.001
@@ -33,8 +18,8 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_mgcgs"]
-resource_name = "fade out"
+[sub_resource type="Animation" id="Animation_llb0d"]
+resource_name = "fade"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -45,13 +30,46 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_mgcgs"]
+resource_name = "fade out"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0rg2l"]
+resource_name = "fade in long"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_selko"]
 _data = {
 "RESET": SubResource("Animation_ojwqr"),
 "fade": SubResource("Animation_llb0d"),
+"fade in long": SubResource("Animation_0rg2l"),
 "fade out": SubResource("Animation_mgcgs")
 }
 

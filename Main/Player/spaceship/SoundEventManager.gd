@@ -3,6 +3,7 @@ extends Node2D
 @export var oxygen_sound: EventAsset
 @export var engine_sound: EventAsset
 @export var hit_sound: EventAsset
+@export var low_oxy_sound: EventAsset
 
 func play_sound(type):
 	if type == "oxygen" and oxygen_sound:
@@ -13,3 +14,6 @@ func play_sound(type):
 	
 	if type == "hit" and hit_sound:
 		FMODRuntime.play_one_shot(hit_sound, self)
+	
+	if type == "low_oxy" and low_oxy_sound:
+		FMODRuntime.play_one_shot(low_oxy_sound, self)

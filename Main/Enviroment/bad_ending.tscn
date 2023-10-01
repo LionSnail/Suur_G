@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://rtmjk3ve7l3c"]
+[gd_scene load_steps=3 format=3 uid="uid://rtmjk3ve7l3c"]
 
+[ext_resource type="Script" path="res://Main/Enviroment/endingmanager.gd" id="1_o4yuf"]
 [ext_resource type="PackedScene" uid="uid://6rh888bwbkee" path="res://Main/UI/main_menu/fade_manager.tscn" id="1_phx0a"]
 
 [node name="Bad_ending" type="Node2D"]
+script = ExtResource("1_o4yuf")
 
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
@@ -10,3 +12,5 @@ offset_bottom = 23.0
 text = "Here is a bad ending :C"
 
 [node name="Fade_manager" parent="." instance=ExtResource("1_phx0a")]
+
+[node name="Soundmanager" type="Node2D" parent="."]

@@ -8,7 +8,7 @@ extends Node2D
 
 func end_game(ending):
 	# ending 1, aliens destroy ship
-	$Fade_manager.fade_out()
+	$Fade_manager.fade_out_long()
 	await get_tree().create_timer(1).timeout
 	# ending 0, you have run out of fuel/engine
 	

@@ -1,23 +1,18 @@
-extends Node
-class_name Audio_
+extends Node2D
 
-@export var menu_music_path: String = "event:/Music/MainMelody"
-@export var game_music_path: String = "event:/Music/GameMainMelody"
-@export var bad_ending_boom_path: String = "event:/SFX/Bang!"
+var menu_music_path: String = "event:/Music/MainMelody"
+var game_music_path: String = "event:/Music/GameMainMelody"
+var bad_ending_boom_path: String = "event:/SFX/Bang!"
 
-@export var is_menu : bool
-
-@export var click_sound: EventAsset
+var click_sound: String = "event:/UI/Click"
 
 var instance: EventInstance
 
-@export var is_beginning : bool
 
 
 func _ready():
 	instance = FMODRuntime.create_instance_path(menu_music_path)
 	instance.start()
-	
 	
 
 # Function to change the music track.
@@ -35,7 +30,7 @@ func fade_out_and_change_track(new_track_path: String):
 
 
 func clicker():
-	FMODRuntime.play_one_shot(click_sound)
+	FMODRuntime.play_one_shot_path(click_sound)
 	return 
 
 func stop_current():

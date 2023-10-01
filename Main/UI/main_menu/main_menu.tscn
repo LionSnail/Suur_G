@@ -1,17 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://cet08ei16o415"]
+[gd_scene load_steps=13 format=3 uid="uid://cet08ei16o415"]
 
 [ext_resource type="Script" path="res://Main/UI/main_menu/menu_script.gd" id="1_i6gwu"]
 [ext_resource type="PackedScene" uid="uid://bvrns7nrll4uu" path="res://Main/UI/main_menu/settings.tscn" id="2_og6hp"]
 [ext_resource type="Texture2D" uid="uid://cpb10coi021hb" path="res://Artwork/UI/button.png" id="2_vqmqh"]
 [ext_resource type="Texture2D" uid="uid://ct0lbrlwp054" path="res://Artwork/UI/button_pressed.png" id="3_c4dsl"]
-[ext_resource type="Script" path="res://Main/UI/main_menu/FMOD_audio.gd" id="4_jyenf"]
 [ext_resource type="BankAsset" uid="uid://b5ahpb1v6h7eu" path="res://addons/FMOD/editor/resources/banks/{edbd8dcb-0752-4a13-8d20-26277182839a}.tres" id="5_r6k2f"]
 [ext_resource type="BankAsset" uid="uid://cv0ogyleqic3b" path="res://addons/FMOD/editor/resources/banks/{3050b558-214b-4c81-be02-4ff0cad1614c}.tres" id="6_jd11y"]
 [ext_resource type="BankAsset" uid="uid://dla70070w4is3" path="res://addons/FMOD/editor/resources/banks/{a84d958c-5030-00c3-384b-c50e3b2267d4}.tres" id="7_kkevt"]
 [ext_resource type="BankAsset" uid="uid://d10c2i08vtu64" path="res://addons/FMOD/editor/resources/banks/{13cfbab9-cb0c-4ba4-9316-6d7fe24906ee}.tres" id="8_21t54"]
 [ext_resource type="BankAsset" uid="uid://u1paqu5it1mm" path="res://addons/FMOD/editor/resources/banks/{dc3fb0fd-333a-4029-bd03-284f5d60f103}.tres" id="9_cbohb"]
 [ext_resource type="Texture2D" uid="uid://b1pe063ppbh0x" path="res://Artwork/UI/menu.png" id="12_h8cs2"]
-[ext_resource type="EventAsset" uid="uid://bhbhdc4acduoh" path="res://addons/FMOD/editor/resources/events/{036b32d7-7710-404c-a5dd-f9d40f0d4ae7}.tres" id="12_letrl"]
 [ext_resource type="Script" path="res://Main/UI/main_menu/AudioBusInit.gd" id="13_iy5k2"]
 [ext_resource type="BusAsset" uid="uid://dtmm4nd5ekugh" path="res://addons/FMOD/editor/resources/busses/{9d74026d-f84a-41a6-bc16-af8a405a2dcc}.tres" id="14_kxel8"]
 
@@ -145,8 +143,6 @@ scale = Vector2(0.6, 0.5)
 texture = ExtResource("12_h8cs2")
 
 [node name="Node2D" type="Node2D" parent="."]
-script = ExtResource("4_jyenf")
-click_sound = ExtResource("12_letrl")
 
 [node name="AudioBusInit" type="Node2D" parent="."]
 script = ExtResource("13_iy5k2")
