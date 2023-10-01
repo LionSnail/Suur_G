@@ -3,7 +3,7 @@ extends Area2D
 var is_mouse = false
 var active = false
 var type = name
-
+@export var DEBUG_BOOST = 10
 @export var icon : CompressedTexture2D 
 
 func _ready():

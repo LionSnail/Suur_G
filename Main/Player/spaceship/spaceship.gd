@@ -57,12 +57,18 @@ func screen_shake(force):
 
 
 
-func remove_engine(amount):
-	engine_amount -= amount * difficulty
-	
+func remove_engine(amount, flat_damage = false):
+	if !flat_damage:
+		engine_amount -= amount * difficulty
+	engine_amount -= amount
+	if engine_amount <= 0:
+		get_parent().end_game(1)
+	#add end contition
 
 func remove_oxygen(amount):
 	oxy_amount -= amount * difficulty
+	if oxy_amount <= 0:
+		get_parent().end_game(1)
 	
 
 func update_ui():
@@ -75,6 +81,7 @@ func _on_shiphull_area_entered(area):
 	if area.is_in_group("Enemy"):
 		area.latch()
 		
+		remove_engine(15, true)
 		screen_shake(area.speed)
 		big_flicker()
 		$baseart.worry()
@@ -99,17 +106,21 @@ func add_cracks(hp):
 func big_flicker():
 	big_flick = true
 	light_flick($lights/PointLight2D, 0.1)
-	light_flick($lights/smalllights/bluelight, 1)
-	light_flick($lights/smalllights/redlight, 1)
+	light_flick($lights/smalllights/bluelight, 1, $modules/Oxygen/icon/bar/ProgressBar)
+	light_flick($lights/smalllights/redlight, 1, $modules/Engine/icon/bar/ProgressBar)
 	
 	big_flick = false
 
-func light_flick(light, end_amount):
+func light_flick(light, end_amount, bar = false):
 	for i in range(randi_range(1, 3)):
-		light.blend_mode = PointLight2D.BLEND_MODE_SUB
-		light.energy = 1
+		if bar:
+			bar.visible = false
+		
+		light.energy = 0
 		await get_tree().create_timer(randf_range(0.5, 2)).timeout
-		light.blend_mode = PointLight2D.BLEND_MODE_ADD
+		
+		if bar:
+			bar.visible = true
 		light.energy = end_amount
 		await get_tree().create_timer(randf_range(0.5, 1)).timeout
 
