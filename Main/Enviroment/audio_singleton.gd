@@ -1,5 +1,7 @@
 extends Node2D
 
+
+
 var menu_music_path: String = "event:/Music/MainMelody"
 var game_music_path: String = "event:/Music/GameMainMelody"
 var bad_ending_boom_path: String = "event:/SFX/Bang!"

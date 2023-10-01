@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://cfk1ngkgvpl1b"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Music/BadEnding"
+guid = "{ac206138-bd16-4c3a-bab0-98604f0ddf2c}"
+name = "BadEnding"

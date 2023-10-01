@@ -4,7 +4,7 @@ extends Node2D
 
 var oxy_amount = 100
 var engine_amount = 100
-var hp = 1
+var hp = 10
 var current = ""
 
 var difficulty = 0.1
@@ -100,6 +100,7 @@ func _on_shiphull_area_entered(area):
 		hp -= area.hp
 		add_cracks(hp)
 		if hp <= 0:
+			await get_tree().create_timer(0.2).timeout
 			get_parent().end_game(1)
 
 func add_cracks(hp):
