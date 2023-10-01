@@ -32,9 +32,8 @@ func _on_done_pressed():
 
 
 func _on_h_slider_sfx_value_changed(value):
-	pass # Replace with function body.
+	$AudioBusInit.change_volume(value, "sfx")
 
 
 func _on_h_slider_music_value_changed(value):
-	
-	$AudioBusInit.change_volume(value)
+	$AudioBusInit.change_volume(value, "music")
