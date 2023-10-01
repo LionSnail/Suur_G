@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cet08ei16o415"]
+[gd_scene load_steps=15 format=3 uid="uid://cet08ei16o415"]
 
 [ext_resource type="Script" path="res://Main/UI/main_menu/menu_script.gd" id="1_i6gwu"]
 [ext_resource type="PackedScene" uid="uid://bvrns7nrll4uu" path="res://Main/UI/main_menu/settings.tscn" id="2_og6hp"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b1pe063ppbh0x" path="res://Artwork/UI/menu.png" id="12_h8cs2"]
 [ext_resource type="EventAsset" uid="uid://bhbhdc4acduoh" path="res://addons/FMOD/editor/resources/events/{036b32d7-7710-404c-a5dd-f9d40f0d4ae7}.tres" id="12_letrl"]
 [ext_resource type="Script" path="res://Main/UI/main_menu/AudioBusInit.gd" id="13_iy5k2"]
+[ext_resource type="BusAsset" uid="uid://dtmm4nd5ekugh" path="res://addons/FMOD/editor/resources/busses/{9d74026d-f84a-41a6-bc16-af8a405a2dcc}.tres" id="14_kxel8"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -149,6 +150,7 @@ click_sound = ExtResource("12_letrl")
 
 [node name="AudioBusInit" type="Node2D" parent="."]
 script = ExtResource("13_iy5k2")
+bus_asset_music = ExtResource("14_kxel8")
 
 [connection signal="pressed" from="CenterContainer/HBoxContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="CenterContainer/HBoxContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
