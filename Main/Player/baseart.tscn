@@ -29,7 +29,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -43,7 +43,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"worry",
-"speed": 5.0
+"speed": 2.0
 }]
 
 [node name="baseart" type="Node2D"]
@@ -55,6 +55,7 @@ position = Vector2(-3, 41)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_ko7vf")
 animation = &"worry"
+frame_progress = 0.667956
 
 [node name="Shipbg" type="Sprite2D" parent="."]
 z_index = -1
