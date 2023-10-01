@@ -4,7 +4,7 @@ extends Node2D
 
 var oxy_amount = 100
 var engine_amount = 100
-var hp = 10
+var hp = 1
 var current = ""
 
 var difficulty = 0.1

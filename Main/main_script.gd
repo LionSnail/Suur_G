@@ -4,7 +4,9 @@ extends Node2D
 @onready var good_ending = "res://Main/Enviroment/good_ending.tscn"
 
 
-
+func _ready():
+	await  get_tree().create_timer(4).timeout
+	$Node2D/hint.visible = false
 
 func end_game(ending):
 	# ending 1, aliens destroy ship
