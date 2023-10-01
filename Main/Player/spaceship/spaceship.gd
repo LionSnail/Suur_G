@@ -4,7 +4,7 @@ extends Node2D
 
 var oxy_amount = 100
 var engine_amount = 100
-var hp = 1
+var hp = 10
 var current = ""
 
 var difficulty = 0.1
@@ -94,7 +94,6 @@ func _on_shiphull_area_entered(area):
 		remove_engine(15, true)
 		screen_shake(area.speed)
 		big_flicker()
-		$baseart.worry()
 		
 		
 		hp -= area.hp
@@ -105,11 +104,13 @@ func _on_shiphull_area_entered(area):
 
 func add_cracks(hp):
 	if hp <= 8:
+		$baseart.worry()
 		$crack_places/pos1.visible = true
 	if hp <= 6:
 		$crack_places/pos2.visible = true
 	if hp <= 4:
 		$crack_places/pos3.visible = true
+		$baseart.big_worry()
 	if hp <= 2:
 		$crack_places/pos4.visible = true
 

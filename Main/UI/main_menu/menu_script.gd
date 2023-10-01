@@ -7,7 +7,7 @@ var opening_scene = load("res://Main/main.tscn")
 @onready var audio = $Node2D
 
 func _ready():
-	pass
+	AudioSingleton.fade_out_and_change_track(menu_music_path)
 	#$Fade_manager.visible = false
 
 

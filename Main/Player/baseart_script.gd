@@ -10,3 +10,6 @@ func worry():
 
 func idle():
 	$Character.play("idle")
+
+func big_worry():
+	$Character.play("bigworry")
