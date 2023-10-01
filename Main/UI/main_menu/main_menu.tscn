@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=11 format=3 uid="uid://cet08ei16o415"]
-=======
-[gd_scene load_steps=13 format=3 uid="uid://cet08ei16o415"]
->>>>>>> a175bbc0977074095fc7abce90607160631acfe1
+[gd_scene load_steps=12 format=3 uid="uid://cet08ei16o415"]
 
 [ext_resource type="Script" path="res://Main/UI/main_menu/menu_script.gd" id="1_i6gwu"]
 [ext_resource type="PackedScene" uid="uid://bvrns7nrll4uu" path="res://Main/UI/main_menu/settings.tscn" id="2_og6hp"]
@@ -139,24 +135,18 @@ bank_2 = ExtResource("7_kkevt")
 bank_3 = ExtResource("8_21t54")
 bank_4 = ExtResource("9_cbohb")
 
-<<<<<<< HEAD
-[node name="Node2D" type="Node2D" parent="."]
-script = ExtResource("4_jyenf")
-
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
-=======
 [node name="Menu" type="Sprite2D" parent="."]
 z_index = -2
 position = Vector2(768, 384)
 scale = Vector2(0.6, 0.5)
 texture = ExtResource("12_h8cs2")
 
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("4_jyenf")
+
 [connection signal="pressed" from="CenterContainer/HBoxContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="CenterContainer/HBoxContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="CenterContainer/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Settings/VBoxContainer/VBoxContainer/done" to="." method="_on_done_pressed"]
->>>>>>> a175bbc0977074095fc7abce90607160631acfe1
 
 [editable path="Settings"]

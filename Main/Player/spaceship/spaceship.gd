@@ -29,10 +29,16 @@ func flickering():
 func click(current):
 	match current:
 		"Oxygen":
+			# play oxygen click sound
+			
+			
 			oxy_amount = clamp(oxy_amount + 3, 0, 100)
 			
 			
 		"Engine":
+			# play engine click sound
+			
+			
 			engine_amount = clamp(engine_amount + 3, 0, 100)
 			
 		
