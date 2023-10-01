@@ -12,30 +12,56 @@ grow_vertical = 2
 
 [node name="Button" type="Sprite2D" parent="."]
 position = Vector2(768, 369)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_4ryl4")
 
-[node name="VBoxContainer" type="CenterContainer" parent="."]
+[node name="HBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -40.5
+offset_right = 100.0
+offset_bottom = 40.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "Volume"
+text = "Music
+"
 horizontal_alignment = 1
 
-[node name="HSlider" type="HSlider" parent="VBoxContainer/VBoxContainer"]
+[node name="HSlider_music" type="HSlider" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
-value = 90.0
+max_value = 1.0
+step = 0.01
+value = 1.0
 
-[node name="done" type="Button" parent="VBoxContainer/VBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "SFX"
+horizontal_alignment = 1
+
+[node name="HSlider_sfx" type="HSlider" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="done" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 text = "Done"

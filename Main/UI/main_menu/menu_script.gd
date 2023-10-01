@@ -24,12 +24,17 @@ func _on_quit_pressed():
 	get_tree().quit()
 
 
-func _on_h_slider_value_changed(value):
-	pass # Replace with function body.
-
-
 func _on_done_pressed():
 	audio.clicker()
 	$CenterContainer/HBoxContainer.visible = true
 	$Settings.visible = false
 
+
+
+func _on_h_slider_sfx_value_changed(value):
+	pass # Replace with function body.
+
+
+func _on_h_slider_music_value_changed(value):
+	
+	$AudioBusInit.change_volume(value)
